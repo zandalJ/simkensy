@@ -8,9 +8,9 @@
     />
     <meta
       name="description"
-      content="Ekskluzywna biżuteria SimonaK — odkryj naszą starannie wyselekcjonowaną kolekcję naszyjników, pierścionków i bransoletek."
+      content="Amulety SimonaK wspierają Twoją energię, pewność i lekkość w codzienności."
     />
-    <title>SimonaK • Kolekcja Biżuterii Premium</title>
+    <title>SimonaK • Amulety energii</title>
     <link
       rel="icon"
       type="image/svg+xml"
@@ -23,370 +23,1032 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/tailwind.css" />
-  </head>
-  <body>
-    <header class="relative overflow-hidden">
-      <nav aria-label="Główne" class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 lg:px-10">
-        <a
-          href="#hero"
-          class="font-display text-lg uppercase tracking-[0.45em] text-champagne focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-aurum"
-          >SimonaK</a
-        >
-        <div class="hidden items-center gap-10 lg:flex">
-          <a class="nav-link" href="#kolekcja">Kolekcja</a>
-          <a class="nav-link" href="#historia">Historia</a>
-          <a class="nav-link" href="#kontakt">Kontakt</a>
-        </div>
-        <a class="cta-button hidden lg:inline-flex" href="#kolekcja">Zobacz kolekcję</a>
-        <button
-          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-claret/40 text-champagne transition duration-300 ease-out hover:bg-claret/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-aurum lg:hidden"
-          type="button"
-          aria-label="Otwórz menu"
-          aria-expanded="false"
-          id="menuButton"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none">
-            <path d="M5 7h14M5 12h14M12 17h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-          </svg>
-        </button>
-      </nav>
-
-      <div class="absolute inset-0 -z-10 overflow-hidden">
-        <div class="absolute inset-0 bg-sable"></div>
-        <div class="grain-overlay absolute inset-0 opacity-40 mix-blend-screen"></div>
-        <div class="pointer-events-none absolute inset-0">
-          <span class="absolute -left-20 top-16 h-44 w-44 rounded-[42%] border border-aurum/10 bg-aurum/6 blur-xl animate-floatMedium"></span>
-          <span class="absolute right-[8%] top-10 h-56 w-56 rounded-[38%] border border-claret/30 bg-claret/20 blur-3xl animate-floatSlow"></span>
-          <span class="absolute bottom-10 left-[12%] h-40 w-40 rounded-[50%] border border-aurum/15 bg-aurum/8 blur-xl animate-floatFast"></span>
-        </div>
-      </div>
-
-      <main id="hero" class="relative mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 pb-24 pt-12 lg:flex-row lg:items-end lg:gap-20 lg:px-10 lg:pb-32 lg:pt-20">
-        <div class="flex-1 space-y-8">
-          <p class="font-mono text-xs uppercase tracking-[0.5em] text-aurum/70 reveal" data-animation="slide-right">
-            Limitowana seria 2025
-          </p>
-          <h1 class="max-w-xl text-4xl leading-tight text-parchment sm:text-5xl md:text-6xl reveal" data-animation="slide-right">
-            Biżuteria, która celebruje światło i subtelną aurę królewskiego stylu.
-          </h1>
-          <p class="max-w-lg text-base text-champagne/80 md:text-lg reveal" data-animation="slide-right">
-            Kolekcja SimonaK to połączenie ręcznego rzemiosła z nowoczesnym minimalizmem. Każdy detal został zaprojektowany, by podkreślić osobistą aurę i wyrafinowaną elegancję.
-          </p>
-          <div class="flex flex-col gap-4 sm:flex-row sm:items-center reveal" data-animation="slide-right">
-            <a class="cta-button" href="#kolekcja">Poznaj kolekcję</a>
-            <a
-              class="inline-flex items-center gap-3 rounded-full border border-transparent px-6 py-3 font-mono text-sm uppercase tracking-[0.32em] text-champagne/70 transition duration-300 ease-out hover:text-champagne focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-aurum"
-              href="#historia"
-            >
-              Odkryj historię
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none">
-                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <aside class="relative flex-1 reveal" data-animation="slide-left">
-          <div class="relative isolate overflow-hidden rounded-[2.5rem] border border-champagne/10 bg-espresso/60 p-6 shadow-card backdrop-blur-2xl">
-            <span class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-aurum/8 blur-3xl"></span>
-            <div class="flex flex-col gap-6">
-              <div class="flex items-center justify-between">
-                <p class="font-mono text-xs uppercase tracking-[0.4em] text-aurum/60">Wybrane klejnoty</p>
-                <span class="inline-flex items-center gap-2 rounded-full border border-claret/40 bg-claret/20 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.3em] text-champagne">
-                  Premium
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 5l2.09 4.24L18 9.27l-3 2.93.71 4.14L12 14.77l-3.71 1.57L9 12.2 6 9.27l3.91-.03L12 5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
-                  </svg>
-                </span>
-              </div>
-              <div class="grid gap-4 sm:grid-cols-2">
-                <article class="group relative overflow-hidden rounded-2xl border border-champagne/8 bg-espresso/70 p-5 transition duration-500 ease-out hover:border-aurum/50 hover:bg-espresso/80">
-                  <div class="flex items-center justify-between">
-                    <p class="font-display text-xl text-parchment">Aurora</p>
-                    <span class="font-mono text-[10px] uppercase tracking-[0.4em] text-aurum/70">Nowość</span>
-                  </div>
-                  <p class="mt-3 text-sm text-champagne/70">
-                    Naszyjnik z lodowymi kwarcami osadzonymi w 24k złocie, inspirowany światłem poranka.
-                  </p>
-                  <span class="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.4em] text-aurum/80">
-                    Zobacz
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 16 16" fill="none">
-                      <path d="M4 8h8M8.5 5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                </article>
-                <article class="group relative overflow-hidden rounded-2xl border border-champagne/8 bg-espresso/70 p-5 transition duration-500 ease-out hover:border-aurum/50 hover:bg-espresso/80">
-                  <div class="flex items-center justify-between">
-                    <p class="font-display text-xl text-parchment">Solaris</p>
-                    <span class="font-mono text-[10px] uppercase tracking-[0.4em] text-aurum/70">Edycja</span>
-                  </div>
-                  <p class="mt-3 text-sm text-champagne/70">
-                    Bransoleta z rubinowymi akcentami i delikatnymi zdobieniami mikromozaiki.
-                  </p>
-                  <span class="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.4em] text-aurum/80">
-                    Zobacz
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 16 16" fill="none">
-                      <path d="M4 8h8M8.5 5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                </article>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </main>
-    </header>
-
-    <section id="kolekcja" class="relative mx-auto w-full max-w-6xl px-6 pb-20 lg:px-10">
-      <div class="reveal space-y-4 text-center" data-animation="slide-right">
-        <p class="font-mono text-xs uppercase tracking-[0.5em] text-aurum/60">Signature Pieces</p>
-        <h2 class="text-3xl text-parchment sm:text-4xl">Wyjątkowe elementy kolekcji</h2>
-        <p class="mx-auto max-w-2xl text-sm text-champagne/70 sm:text-base">
-          Każdy projekt w kolekcji SimonaK opiera się na oryginalnych strukturach i manualnym wykończeniu, które nadają biżuterii głębię i ponadczasową estetykę.
-        </p>
-      </div>
-
-      <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        <article class="feature-card group reveal" data-animation="slide-right">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 32 32" fill="none">
-              <circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="1.6" />
-              <path d="M16 6v4m0 12v4m10-10h-4M10 16H6m15.3-7.3l-2.8 2.8m0 9l2.8 2.8m-12.6 0 2.8-2.8m0-9-2.8-2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-            </svg>
-          </div>
-          <h3 class="text-2xl text-parchment">Światło złotego blasku</h3>
-          <p class="text-sm text-champagne/70">
-            Autorskie odlewy w 24k złocie połączone z kwarcami o wysokiej czystości zapewniają lustrzane odbicie światła i wysublimowany połysk.
-          </p>
-          <a
-            class="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.4em] text-aurum/80 transition duration-300 ease-out hover:text-aurum"
-            href="#"
-          >
-            Detale kolekcji
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 16 16" fill="none">
-              <path d="M4 8h8M8.5 5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </a>
-        </article>
-
-        <article class="feature-card group reveal" data-animation="slide-right">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 32 32" fill="none">
-              <path d="M8 10c0-2.21 1.79-4 4-4h8c2.21 0 4 1.79 4 4v12c0 2.21-1.79 4-4 4h-8c-2.21 0-4-1.79-4-4V10z" stroke="currentColor" stroke-width="1.6" />
-              <path d="M12 22l2.6-3.9a2 2 0 013.3 0L20 22" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-              <circle cx="16" cy="14" r="2" stroke="currentColor" stroke-width="1.6" />
-            </svg>
-          </div>
-          <h3 class="text-2xl text-parchment">Autentyczne materiały</h3>
-          <p class="text-sm text-champagne/70">
-            Wszystkie kamienie pochodzą z certyfikowanych źródeł, a każdy element jest hartowany, by zachować nieskazitelność nawet przy codziennym użytkowaniu.
-          </p>
-          <a
-            class="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.4em] text-aurum/80 transition duration-300 ease-out hover:text-aurum"
-            href="#"
-          >
-            Proces selekcji
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 16 16" fill="none">
-              <path d="M4 8h8M8.5 5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </a>
-        </article>
-
-        <article class="feature-card group reveal" data-animation="slide-right">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 32 32" fill="none">
-              <path d="M6 9.5l10-4 10 4-10 4-10-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
-              <path d="M6 16.5l10-4 10 4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
-              <path d="M6 23.5l10-4 10 4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <h3 class="text-2xl text-parchment">Architektura formy</h3>
-          <p class="text-sm text-champagne/70">
-            Rzeźbiarskie krawędzie inspirowane modernistyczną architekturą nadają biżuterii charakteru i zapewniają niepowtarzalny profil.
-          </p>
-          <a
-            class="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.4em] text-aurum/80 transition duration-300 ease-out hover:text-aurum"
-            href="#"
-          >
-            Zobacz detale
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 16 16" fill="none">
-              <path d="M4 8h8M8.5 5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </a>
-        </article>
-
-        <article class="feature-card group reveal md:col-span-2 xl:col-span-1" data-animation="slide-right">
-          <div class="feature-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 32 32" fill="none">
-              <path d="M6 18c0-6.6 4.5-12 10-12s10 5.4 10 12c0 6.6-4.5 12-10 12S6 24.6 6 18z" stroke="currentColor" stroke-width="1.6" />
-              <path d="M16 8v20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-              <path d="M10 18h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-            </svg>
-          </div>
-          <h3 class="text-2xl text-parchment">Indywidualna personalizacja</h3>
-          <p class="text-sm text-champagne/70">
-            Tworzymy personalizowane grawerunki, aby każda biżuteria była odzwierciedleniem Twojej historii i najważniejszych momentów.
-          </p>
-          <a
-            class="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.4em] text-aurum/80 transition duration-300 ease-out hover:text-aurum"
-            href="#"
-          >
-            Zamów spersonalizuj
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 16 16" fill="none">
-              <path d="M4 8h8M8.5 5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <section id="historia" class="relative border-y border-champagne/10 bg-espresso/50 py-20">
-      <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute left-10 top-14 h-28 w-28 rounded-full border border-aurum/30 bg-aurum/12 blur-lg animate-floatSlow"></div>
-        <div class="absolute right-16 bottom-10 h-32 w-32 rounded-full border border-claret/40 bg-claret/20 blur-2xl animate-floatMedium"></div>
-      </div>
-      <div class="relative mx-auto flex w-full max-w-5xl flex-col gap-12 px-6 lg:flex-row lg:items-center lg:gap-16 lg:px-10">
-        <div class="flex-1 space-y-6 reveal" data-animation="slide-right">
-          <p class="font-mono text-xs uppercase tracking-[0.5em] text-aurum/60">Nasza filozofia</p>
-          <h2 class="text-3xl text-parchment sm:text-4xl">
-            Odkryj subtelny balans pomiędzy tradycją a współczesnym designem.
-          </h2>
-          <p class="text-sm text-champagne/70 sm:text-base">
-            SimonaK powstała z fascynacji formami natury i światłem, które prześlizguje się po fakturach szlachetnych materiałów. Każdy element biżuterii przechodzi wieloetapowy proces: od ręcznej selekcji minerałów, przez formowanie woskowych modeli, aż po finalne polerowanie.
-          </p>
-          <p class="text-sm text-champagne/70 sm:text-base">
-            Wierzymy, że biżuteria powinna nie tylko wyglądać spektakularnie, ale też opowiadać historię — Twoją własną. Dlatego każdy detal dopracowujemy z najwyższą uwagą, by zachować unikatowy charakter i bezczasową estetykę.
-          </p>
-        </div>
-        <div class="flex-1 space-y-6 reveal" data-animation="slide-left">
-          <div class="rounded-3xl border border-champagne/10 bg-espresso/70 p-8 shadow-card backdrop-blur-2xl">
-            <h3 class="font-display text-2xl text-parchment">Rzemiosło na miarę sztuki</h3>
-            <p class="mt-4 text-sm text-champagne/70">
-              Warsztat SimonaK łączy techniki złotnicze z artystyczną wizją. Drobne niedoskonałości wynikające z ręcznej pracy traktujemy jako atut – znak, że biżuteria jest tworzona przez ludzi dla ludzi.
-            </p>
-            <div class="mt-6 flex flex-wrap gap-3">
-              <span class="rounded-full border border-aurum/30 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.3em] text-aurum/80">Etyczne źródła</span>
-              <span class="rounded-full border border-aurum/30 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.3em] text-aurum/80">Ręczne wykończenie</span>
-              <span class="rounded-full border border-aurum/30 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.3em] text-aurum/80">Limitowane serie</span>
-            </div>
-          </div>
-          <div class="rounded-3xl border border-champagne/10 bg-espresso/70 p-8 shadow-card backdrop-blur-2xl">
-            <h3 class="font-display text-2xl text-parchment">Doświadczenie klienta</h3>
-            <p class="mt-4 text-sm text-champagne/70">
-              Każda przesyłka to przemyślany rytuał odkrywania. Do każdego produktu dołączamy certyfikat autentyczności oraz rekomendacje pielęgnacyjne przygotowane przez naszych jubilerów.
-            </p>
-            <a
-              class="mt-6 inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.4em] text-aurum/80 transition duration-300 ease-out hover:text-aurum"
-              href="#kontakt"
-            >
-              Skontaktuj się
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 16 16" fill="none">
-                <path d="M4 8h8M8.5 5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer id="kontakt" class="relative px-6 py-12 lg:px-10">
-      <div class="mx-auto flex w-full max-w-5xl flex-col gap-8 border border-champagne/10 bg-espresso/70 px-6 py-10 shadow-card backdrop-blur-2xl sm:flex-row sm:items-center sm:justify-between">
-        <div class="space-y-3">
-          <p class="font-mono text-xs uppercase tracking-[0.5em] text-aurum/70">SimonaK</p>
-          <p class="max-w-sm text-sm text-champagne/70">
-            Zanurz się w świat biżuterii premium, w którym każdy detal ma znaczenie — od pierwszego szkicu po finalny błysk.
-          </p>
-        </div>
-        <div class="flex flex-col gap-3 text-sm text-champagne/70">
-          <a class="transition duration-300 ease-out hover:text-aurum focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-aurum" href="mailto:hello@simkensy.com">
-            hello@simkensy.com
-          </a>
-          <a class="transition duration-300 ease-out hover:text-aurum focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-aurum" href="tel:+48889384504">
-            +48 889 384 504
-          </a>
-        </div>
-      </div>
-      <div class="mx-auto mt-8 flex w-full max-w-5xl flex-col gap-3 text-xs uppercase tracking-[0.4em] text-champagne/50 sm:flex-row sm:items-center sm:justify-between">
-        <p>&copy; 2025 SimonaK. Wszelkie prawa zastrzeżone.</p>
-        <div class="flex gap-6">
-          <a class="transition duration-300 ease-out hover:text-aurum focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-aurum" href="#polityka">
-            Polityka prywatności
-          </a>
-          <a class="transition duration-300 ease-out hover:text-aurum focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-aurum" href="mailto:hello@simkensy.com">
-            Kontakt mailowy
-          </a>
-        </div>
-      </div>
-    </footer>
-
-    <div id="polityka" class="sr-only" aria-hidden="true">Polityka prywatności SimonaK.</div>
-
-    <div
-      id="mobileMenu"
-      class="fixed inset-x-4 top-20 z-50 hidden flex-col gap-4 rounded-3xl border border-champagne/10 bg-espresso/90 p-6 shadow-card backdrop-blur-xl"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="menuButton"
-    >
-      <a class="nav-link" href="#kolekcja">Kolekcja</a>
-      <a class="nav-link" href="#historia">Historia</a>
-      <a class="nav-link" href="#kontakt">Kontakt</a>
-      <a class="cta-button" href="#kolekcja">Zobacz kolekcję</a>
-    </div>
-
-    <script>
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-      if (!prefersReducedMotion.matches) {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          {
-            threshold: 0.2,
-          }
-        );
-
-        document.querySelectorAll(".reveal").forEach((element) => {
-          observer.observe(element);
-        });
-      } else {
-        document.querySelectorAll(".reveal").forEach((element) => {
-          element.classList.add("is-visible");
-        });
+    <style>
+      :root {
+        --claret: #6d2b3f;
+        --claret-soft: rgba(109, 43, 63, 0.74);
+        --champagne: rgba(244, 232, 211, 0.92);
       }
 
-      const menuButton = document.getElementById("menuButton");
-      const mobileMenu = document.getElementById("mobileMenu");
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        padding: 6rem 1.5rem 8rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        overflow: hidden;
+      }
 
-      menuButton?.addEventListener("click", () => {
-        if (!mobileMenu || !menuButton) return;
-        const isHidden = mobileMenu.classList.contains("hidden");
-        if (isHidden) {
-          mobileMenu.classList.remove("hidden");
-          menuButton.setAttribute("aria-expanded", "true");
-        } else {
-          mobileMenu.classList.add("hidden");
-          menuButton.setAttribute("aria-expanded", "false");
-        }
-      });
+      .hero-media {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
 
-      document.addEventListener("click", (event) => {
-        if (!mobileMenu || !menuButton) return;
-        if (
-          !mobileMenu.classList.contains("hidden") &&
-          !mobileMenu.contains(event.target) &&
-          !menuButton.contains(event.target)
-        ) {
-          mobileMenu.classList.add("hidden");
-          menuButton.setAttribute("aria-expanded", "false");
+      .hero-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.9);
+      }
+
+      .hero-gradient {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          140deg,
+          rgba(17, 11, 10, 0.92) 10%,
+          rgba(17, 11, 10, 0.6) 55%,
+          rgba(26, 22, 20, 0.95) 100%
+        );
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 42rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .hero-tag {
+        align-self: center;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1.75rem;
+        border-radius: 999px;
+        border: 1px solid rgba(200, 169, 106, 0.52);
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+        color: rgba(244, 232, 211, 0.75);
+        background-color: rgba(17, 11, 10, 0.55);
+        backdrop-filter: blur(14px);
+      }
+
+      .hero-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.5rem, 4.4vw, 3.75rem);
+        line-height: 1.25;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgb(244, 232, 211);
+        text-shadow: 0 18px 42px rgba(0, 0, 0, 0.48);
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .section {
+        position: relative;
+        padding: 6rem 1.5rem;
+      }
+
+      .section-intro {
+        max-width: 44rem;
+        margin: 0 auto 3rem auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .section-eyebrow {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.75rem;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+        color: rgba(200, 169, 106, 0.72);
+      }
+
+      .section-heading {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2rem, 3vw, 3rem);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgb(231, 214, 193);
+      }
+
+      .section-subheading {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: rgba(244, 232, 211, 0.72);
+      }
+
+      .amulet-grid {
+        display: grid;
+        gap: 2rem;
+      }
+
+      @media (min-width: 640px) {
+        .amulet-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
-      });
-    </script>
+      }
+
+      @media (min-width: 1024px) {
+        .amulet-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      .amulet-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        border-radius: 1.75rem;
+        border: 1px solid rgba(109, 43, 63, 0.28);
+        background: rgba(26, 22, 20, 0.82);
+        padding: 2rem;
+        box-shadow: 0 20px 46px rgba(10, 8, 6, 0.32);
+        backdrop-filter: blur(26px);
+        transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+          border-color 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .amulet-card:hover {
+        transform: translateY(-12px);
+        border-color: rgba(200, 169, 106, 0.64);
+        box-shadow: 0 28px 56px rgba(109, 43, 63, 0.34);
+      }
+
+      .amulet-media {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.25rem;
+      }
+
+      .amulet-media::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          160deg,
+          rgba(17, 11, 10, 0.2) 10%,
+          rgba(17, 11, 10, 0.85) 100%
+        );
+        pointer-events: none;
+      }
+
+      .amulet-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .amulet-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+
+      .amulet-emoji {
+        font-size: 1.5rem;
+      }
+
+      .amulet-intro {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.32em;
+        color: rgba(244, 232, 211, 0.62);
+      }
+
+      .amulet-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgb(231, 214, 193);
+      }
+
+      .amulet-copy {
+        font-size: 0.98rem;
+        line-height: 1.8;
+        color: rgba(244, 232, 211, 0.75);
+      }
+
+      .amulet-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        border-radius: 999px;
+        border: 1px solid rgba(109, 43, 63, 0.68);
+        padding: 0.65rem 1.75rem;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.75rem;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: rgb(244, 232, 211);
+        background-image: linear-gradient(
+          125deg,
+          rgba(109, 43, 63, 0.95) 0%,
+          rgba(200, 169, 106, 0.48) 100%
+        );
+        box-shadow: 0 18px 34px rgba(109, 43, 63, 0.28);
+        transition: transform 0.3s ease, box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .amulet-cta:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 26px 48px rgba(109, 43, 63, 0.36);
+        border-color: rgba(200, 169, 106, 0.72);
+      }
+
+      .section-energy {
+        text-align: center;
+        background: linear-gradient(
+          180deg,
+          rgba(109, 43, 63, 0.18) 0%,
+          rgba(26, 22, 20, 0.94) 100%
+        );
+      }
+
+      .section-energy p {
+        max-width: 48rem;
+        margin: 0 auto;
+        font-size: 1.05rem;
+        line-height: 1.85;
+        color: rgba(244, 232, 211, 0.78);
+      }
+
+      .feature-grid {
+        display: grid;
+        gap: 1.75rem;
+        margin-top: 3rem;
+      }
+
+      @media (min-width: 640px) {
+        .feature-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      .feature-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .feature-emoji {
+        font-size: 1.4rem;
+        color: rgba(238, 196, 206, 0.9);
+      }
+
+      .feature-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.45rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgb(231, 214, 193);
+      }
+
+      .feature-copy {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: rgba(244, 232, 211, 0.72);
+      }
+
+      .section-cta {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+      }
+
+      .section-process {
+        background: rgba(26, 22, 20, 0.92);
+      }
+
+      .step-grid {
+        display: grid;
+        gap: 1.75rem;
+        max-width: 56rem;
+        margin: 0 auto;
+      }
+
+      @media (min-width: 768px) {
+        .step-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      .step-card {
+        display: flex;
+        gap: 1rem;
+        padding: 1.75rem;
+        border-radius: 1.5rem;
+        border: 1px solid rgba(109, 43, 63, 0.32);
+        background: rgba(26, 22, 20, 0.8);
+        backdrop-filter: blur(24px);
+        box-shadow: 0 20px 44px rgba(10, 8, 6, 0.32);
+      }
+
+      .step-number {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.1rem;
+        line-height: 1;
+        color: rgba(200, 169, 106, 0.84);
+      }
+
+      .step-body h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.95rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: rgba(244, 232, 211, 0.82);
+        margin-bottom: 0.5rem;
+      }
+
+      .step-body p {
+        font-size: 0.96rem;
+        line-height: 1.75;
+        color: rgba(244, 232, 211, 0.7);
+      }
+
+      .section-testimonials .section-subheading {
+        max-width: 42rem;
+        margin: 0 auto;
+      }
+
+      .testimonial-grid {
+        display: grid;
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+
+      @media (min-width: 640px) {
+        .testimonial-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .testimonial-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      .testimonial-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        border: 1px solid rgba(200, 169, 106, 0.22);
+        background: rgba(26, 22, 20, 0.75);
+        backdrop-filter: blur(22px);
+        box-shadow: 0 18px 42px rgba(10, 8, 6, 0.3);
+      }
+
+      .testimonial-quote {
+        font-size: 0.96rem;
+        line-height: 1.8;
+        color: rgba(244, 232, 211, 0.8);
+      }
+
+      .testimonial-author {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.75rem;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: rgba(200, 169, 106, 0.7);
+      }
+
+      .link-underline {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: rgba(200, 169, 106, 0.82);
+      }
+
+      .link-underline::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -4px;
+        height: 1px;
+        background: rgba(200, 169, 106, 0.6);
+        transform-origin: left;
+        transform: scaleX(1);
+        transition: transform 0.3s ease;
+      }
+
+      .link-underline:hover::after {
+        transform: scaleX(0.6);
+      }
+
+      .section-choose {
+        background: rgba(26, 22, 20, 0.94);
+      }
+
+      .product-grid {
+        display: grid;
+        gap: 1.75rem;
+        margin-top: 3rem;
+      }
+
+      @media (min-width: 640px) {
+        .product-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .product-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      .product-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1.5rem;
+        border: 1px solid rgba(109, 43, 63, 0.26);
+        background: rgba(26, 22, 20, 0.82);
+        overflow: hidden;
+        box-shadow: 0 18px 40px rgba(10, 8, 6, 0.28);
+        transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+          border-color 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .product-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(200, 169, 106, 0.65);
+      }
+
+      .product-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .product-body {
+        padding: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .product-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgb(231, 214, 193);
+      }
+
+      .price-tag {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.82rem;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: rgba(200, 169, 106, 0.7);
+      }
+
+      .footer {
+        padding: 3rem 1.5rem 4rem;
+        text-align: center;
+        font-size: 0.74rem;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: rgba(244, 232, 211, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <header class='hero' id='hero'>
+      <div class='hero-media'>
+        <img src='/public/zdj1.jpg' alt='Amulet SimonaK w świetlistym otoczeniu' />
+        <div class='hero-gradient'></div>
+      </div>
+      <div class='hero-content'>
+        <span class='hero-tag'>Amulety Simkensy</span>
+        <h1 class='hero-title'>
+          Chcesz w końcu poczuć spokój, pewność i lekkość w codzienności?
+        </h1>
+        <a class='cta-button' href='#amulets'>Tego pragnę</a>
+      </div>
+    </header>
+    <main>
+      <section id='amulets' class='section section-amulets'>
+        <div class='section-intro'>
+          <p class='section-eyebrow'>Twoja codzienna aura</p>
+          <h2 class='section-heading'>Amulety Simkensy powstały dla kobiet takich jak Ty</h2>
+          <p class='section-subheading'>
+            które pragną czuć bliskość ze sobą, mieć wsparcie swojej intuicji i z czułością celebrować każdy dzień.
+          </p>
+        </div>
+        <div class='amulet-grid'>
+          <article class='amulet-card'>
+            <div class='amulet-media'>
+              <img src='/public/zdj1.jpg' alt='Amulet Inner Child' loading='lazy' />
+            </div>
+            <div class='amulet-content'>
+              <span class='amulet-emoji' aria-hidden='true'>💗</span>
+              <p class='amulet-intro'>Czują, że brakuje im czułości do siebie</p>
+              <h3 class='amulet-title'>Inner Child</h3>
+              <p class='amulet-copy'>
+                Inner Child przypomina, że jesteś wystarczająca i zasługujesz na troskę, nawet gdy nie wszystko się układa.
+              </p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-inner-child-776.html'
+                target='_blank'
+                rel='noopener'
+              >
+                Wybieram
+              </a>
+            </div>
+          </article>
+          <article class='amulet-card'>
+            <div class='amulet-media'>
+              <img src='/public/zdj1.jpg' alt='Amulet Guardian &amp; Mystic' loading='lazy' />
+            </div>
+            <div class='amulet-content'>
+              <span class='amulet-emoji' aria-hidden='true'>🖤</span>
+              <p class='amulet-intro'>Dają z siebie za dużo</p>
+              <h3 class='amulet-title'>Guardian &amp; Mystic</h3>
+              <p class='amulet-copy'>
+                Guardian &amp; Mystic pomaga postawić granice i ochronić energię, żebyś miała siłę dla siebie.
+              </p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-guardian-mystic-745.html'
+                target='_blank'
+                rel='noopener'
+              >
+                Wybieram
+              </a>
+            </div>
+          </article>
+          <article class='amulet-card'>
+            <div class='amulet-media'>
+              <img src='/public/zdj1.jpg' alt='Amulet Sensual &amp; Magnetic' loading='lazy' />
+            </div>
+            <div class='amulet-content'>
+              <span class='amulet-emoji' aria-hidden='true'>💋</span>
+              <p class='amulet-intro'>Chcą poczuć kobiecość i magnetyzm</p>
+              <h3 class='amulet-title'>Sensual &amp; Magnetic</h3>
+              <p class='amulet-copy'>
+                Sensual &amp; Magnetic wzmacnia energię pewności siebie, zmysłowości i wewnętrznej atrakcyjności.
+              </p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-sensual-magnetic-742.html'
+                target='_blank'
+                rel='noopener'
+              >
+                Wybieram
+              </a>
+            </div>
+          </article>
+          <article class='amulet-card'>
+            <div class='amulet-media'>
+              <img src='/public/zdj1.jpg' alt='Amulet Selflove' loading='lazy' />
+            </div>
+            <div class='amulet-content'>
+              <span class='amulet-emoji' aria-hidden='true'>💞</span>
+              <p class='amulet-intro'>Chcą pokochać siebie bez warunków</p>
+              <h3 class='amulet-title'>Selflove</h3>
+              <p class='amulet-copy'>
+                Selflove pomaga widzieć w sobie wartość niezależnie od opinii innych i codziennych potknięć.
+              </p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-selflove-861.html'
+                target='_blank'
+                rel='noopener'
+              >
+                Wybieram
+              </a>
+            </div>
+          </article>
+          <article class='amulet-card'>
+            <div class='amulet-media'>
+              <img src='/public/zdj1.jpg' alt='Amulet Abundance &amp; Joy' loading='lazy' />
+            </div>
+            <div class='amulet-content'>
+              <span class='amulet-emoji' aria-hidden='true'>🌻</span>
+              <p class='amulet-intro'>Czują, że życie stało się zbyt ciężkie</p>
+              <h3 class='amulet-title'>Abundance &amp; Joy</h3>
+              <p class='amulet-copy'>
+                Abundance &amp; Joy przywołuje lekkość i radość, bez presji i bez pośpiechu.
+              </p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-abudance-joy-743.html'
+                target='_blank'
+                rel='noopener'
+              >
+                Wybieram
+              </a>
+            </div>
+          </article>
+          <article class='amulet-card'>
+            <div class='amulet-media'>
+              <img src='/public/zdj1.jpg' alt='Amulet Rozkwitanie' loading='lazy' />
+            </div>
+            <div class='amulet-content'>
+              <span class='amulet-emoji' aria-hidden='true'>🌷</span>
+              <p class='amulet-intro'>Są w procesie zmiany i nie wiedzą, co dalej</p>
+              <h3 class='amulet-title'>Rozkwitanie</h3>
+              <p class='amulet-copy'>
+                Rozkwitanie wspiera zaufanie do procesu i przypomina, że nie musisz się spieszyć.
+              </p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-rozkwitanie-860.html'
+                target='_blank'
+                rel='noopener'
+              >
+                Wybieram
+              </a>
+            </div>
+          </article>
+          <article class='amulet-card'>
+            <div class='amulet-media'>
+              <img src='/public/zdj1.jpg' alt='Amulet Mądrość Przodkiń' loading='lazy' />
+            </div>
+            <div class='amulet-content'>
+              <span class='amulet-emoji' aria-hidden='true'>🌿</span>
+              <p class='amulet-intro'>Chcą poczuć siłę i wsparcie kobiet</p>
+              <h3 class='amulet-title'>Mądrość Przodkiń</h3>
+              <p class='amulet-copy'>
+                Mądrość Przodkiń łączy Cię z energią pokoleń, które też miały odwagę żyć po swojemu.
+              </p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-madrosc-przodkin-777.html'
+                target='_blank'
+                rel='noopener'
+              >
+                Wybieram
+              </a>
+            </div>
+          </article>
+          <article class='amulet-card'>
+            <div class='amulet-media'>
+              <img src='/public/zdj1.jpg' alt='Amulet Intuition &amp; Third Eye' loading='lazy' />
+            </div>
+            <div class='amulet-content'>
+              <span class='amulet-emoji' aria-hidden='true'>💙</span>
+              <p class='amulet-intro'>Chcą bardziej ufać sobie</p>
+              <h3 class='amulet-title'>Intuition &amp; Third Eye</h3>
+              <p class='amulet-copy'>
+                Intuition &amp; Third Eye pomaga wrócić do intuicji i spokoju wewnętrznego głosu.
+              </p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-intuition-third-eye-744.html'
+                target='_blank'
+                rel='noopener'
+              >
+                Wybieram
+              </a>
+            </div>
+          </article>
+          <article class='amulet-card'>
+            <div class='amulet-media'>
+              <img src='/public/zdj1.jpg' alt='Amulet Old Money' loading='lazy' />
+            </div>
+            <div class='amulet-content'>
+              <span class='amulet-emoji' aria-hidden='true'>💰</span>
+              <p class='amulet-intro'>Chcą czuć się pewnie w relacji z pieniędzmi</p>
+              <h3 class='amulet-title'>Old Money</h3>
+              <p class='amulet-copy'>
+                Old Money przypomina, że obfitość to Twój naturalny stan, nie coś, o co musisz walczyć.
+              </p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-old-money-pieniadze-863.html'
+                target='_blank'
+                rel='noopener'
+              >
+                Wybieram
+              </a>
+            </div>
+          </article>
+          <article class='amulet-card'>
+            <div class='amulet-media'>
+              <img src='/public/zdj1.jpg' alt='Amulet Aura' loading='lazy' />
+            </div>
+            <div class='amulet-content'>
+              <span class='amulet-emoji' aria-hidden='true'>🌊</span>
+              <p class='amulet-intro'>Chcą czuć się piękne i spokojne</p>
+              <h3 class='amulet-title'>Aura</h3>
+              <p class='amulet-copy'>
+                Aura wzmacnia poczucie harmonii i autentycznego piękna w codzienności.
+              </p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-aura-862.html'
+                target='_blank'
+                rel='noopener'
+              >
+                Wybieram
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class='section section-energy'>
+        <div class='section-intro'>
+          <h2 class='section-heading'>To nie jest zwykła biżuteria</h2>
+          <p class='section-subheading'>to coś co wspiera Twoją energię każdego dnia.</p>
+        </div>
+        <p>
+          Każdy amulet powstaje z intencją bycia delikatną kotwicą, która przypomina Ci o tym, kim jesteś i dokąd zmierzasz.
+          Towarzyszy Ci w codziennych rytuałach, pomaga oddychać głębiej, wracać do siebie i budować zaufanie do własnych wyborów.
+        </p>
+      </section>
+      <section class='section section-crafted' id='crafted'>
+        <div class='section-intro'>
+          <p class='section-eyebrow'>Ręczne wykonanie</p>
+          <h2 class='section-heading'>Nie ma dwóch takich samych</h2>
+          <p class='section-subheading'>
+            Amulety wykonuję ręcznie z wyjątkowych materiałów, mających swoją historię i znaczenie – dlatego każdy jest inny, tak jak Ty.
+          </p>
+        </div>
+        <div class='feature-grid'>
+          <article class='feature-card'>
+            <span class='feature-emoji' aria-hidden='true'>✺</span>
+            <h3 class='feature-title'>Prawdziwe kwiaty i symbole natury</h3>
+            <p class='feature-copy'>
+              Zatrzymujemy ulotne detale świata roślin, żeby przypominały o cykliczności, wdzięczności i łagodności dla siebie.
+            </p>
+          </article>
+          <article class='feature-card'>
+            <span class='feature-emoji' aria-hidden='true'>✧</span>
+            <h3 class='feature-title'>Piasek i muszle z wyjątkowych miejsc</h3>
+            <p class='feature-copy'>
+              Zamykamy w żywicy fragmenty ważnych podróży, abyś mogła wracać do energii miejsc, które napełniają Cię spokojem.
+            </p>
+          </article>
+          <article class='feature-card'>
+            <span class='feature-emoji' aria-hidden='true'>∞</span>
+            <h3 class='feature-title'>Przedmioty, które mają dla Ciebie znaczenie</h3>
+            <p class='feature-copy'>
+              Wplatamy w amulet drobiazgi, które kojarzą Ci się z miłością, wsparciem i Twoją wewnętrzną mądrością.
+            </p>
+          </article>
+          <article class='feature-card'>
+            <span class='feature-emoji' aria-hidden='true'>❁</span>
+            <h3 class='feature-title'>Pamiątki opowiadające Twoją historię</h3>
+            <p class='feature-copy'>
+              Zachowujemy wspomnienia – od płatków z bukietu ślubnego po listy i symbole bliskich osób, aby towarzyszyły Ci każdego dnia.
+            </p>
+          </article>
+        </div>
+        <div class='section-cta'>
+          <a class='cta-button' href='#choose'>Wybierz swój</a>
+        </div>
+      </section>
+      <section class='section section-process' id='process'>
+        <div class='section-intro'>
+          <p class='section-eyebrow'>Rytuał intencji</p>
+          <h2 class='section-heading'>Jak działa Twój amulet?</h2>
+          <p class='section-subheading'>
+            Każdy amulet ma znaczenie, ale nabiera mocy dopiero wtedy, gdy połączysz go ze swoją intencją.
+          </p>
+        </div>
+        <div class='step-grid'>
+          <div class='step-card'>
+            <span class='step-number'>①</span>
+            <div class='step-body'>
+              <h3>Wybierasz ten, który Cię przyciąga</h3>
+              <p>
+                Nie analizujesz — po prostu czujesz, który wzór „woła” właśnie Ciebie. To ten moment, w którym zaczyna się proces.
+              </p>
+            </div>
+          </div>
+          <div class='step-card'>
+            <span class='step-number'>②</span>
+            <div class='step-body'>
+              <h3>Składasz zamówienie</h3>
+              <p>
+                Przygotowuję Twój amulet z wyjątkowych elementów: kwiatów, piasku, muszli czy przedmiotów, które mają znaczenie.
+              </p>
+            </div>
+          </div>
+          <div class='step-card'>
+            <span class='step-number'>③</span>
+            <div class='step-body'>
+              <h3>Otrzymujesz paczkę z rytuałem założenia</h3>
+              <p>
+                W środku znajdziesz prostą praktykę, która pomoże Ci połączyć się z energią amuletu i intencji, z którą go nosisz.
+              </p>
+            </div>
+          </div>
+          <div class='step-card'>
+            <span class='step-number'>④</span>
+            <div class='step-body'>
+              <h3>Zakładasz go po raz pierwszy</h3>
+              <p>
+                To Twój symboliczny moment wyboru siebie — od teraz amulet towarzyszy Ci w codzienności, przypominając o Twojej mocy.
+              </p>
+            </div>
+          </div>
+          <div class='step-card'>
+            <span class='step-number'>⑤</span>
+            <div class='step-body'>
+              <h3>Amulet staje się Twoją kotwicą</h3>
+              <p>
+                Pomaga wracać do spokoju, pewności i zaufania, ilekroć zaczynasz o tym zapominać. To nie magia — to Twój nowy, namacalny punkt odniesienia.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class='section-cta'>
+          <a class='cta-button' href='#choose'>💫 Wybierz swój amulet</a>
+        </div>
+      </section>
+      <section class='section section-testimonials' id='opinie'>
+        <div class='section-intro'>
+          <p class='section-eyebrow'>Głosy kobiet</p>
+          <h2 class='section-heading'>Opinie</h2>
+          <p class='section-subheading'>
+            Historie kobiet, które wybrały swoje amulety i odkryły w nich codzienne źródło spokoju i pewności.
+          </p>
+        </div>
+        <div class='testimonial-grid'>
+          <article class='testimonial-card'>
+            <p class='testimonial-quote'>
+              „Każdego poranka zakładam Inner Child i wracam do miękkości. To mała biżuteria, a zmienia sposób, w jaki traktuję siebie.”
+            </p>
+            <p class='testimonial-author'>Magda, Warszawa</p>
+          </article>
+          <article class='testimonial-card'>
+            <p class='testimonial-quote'>
+              „Guardian &amp; Mystic to mój talizman granic. Noszę go na spotkaniach biznesowych i czuję, że mam wokół siebie ochronną bańkę.”
+            </p>
+            <p class='testimonial-author'>Iza, Berlin</p>
+          </article>
+          <article class='testimonial-card'>
+            <p class='testimonial-quote'>
+              „Rozkwitanie przypomina mi, że mogę iść swoim tempem. Delikatny rytuał założenia stał się moją codzienną medytacją.”
+            </p>
+            <p class='testimonial-author'>Ola, Gdańsk</p>
+          </article>
+        </div>
+        <a
+          class='link-underline'
+          href='https://drive.google.com/drive/folders/1hqh7qyl88PURqxTP41SWmVboNXxf2FNN?usp=drive_link'
+          target='_blank'
+          rel='noopener'
+        >
+          Zobacz wszystkie opinie
+        </a>
+      </section>
+      <section class='section section-choose' id='choose'>
+        <div class='section-intro'>
+          <p class='section-eyebrow'>Wybierz swój amulet</p>
+          <h2 class='section-heading'>Gotowe, by wspierać Twoją energię</h2>
+          <p class='section-subheading'>
+            Powtórzone wzory z kolekcji — zdecyduj, który będzie Twoim codziennym symbolem.
+          </p>
+        </div>
+        <div class='product-grid'>
+          <a
+            class='product-card'
+            href='https://simkensy.com/pl/products/amulet-bogini-inner-child-776.html'
+            target='_blank'
+            rel='noopener'
+          >
+            <img src='/public/zdj1.jpg' alt='Amulet Inner Child' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Inner Child</h3>
+              <p class='price-tag'>Cena: od 369 zł</p>
+            </div>
+          </a>
+          <a
+            class='product-card'
+            href='https://simkensy.com/pl/products/amulet-bogini-guardian-mystic-745.html'
+            target='_blank'
+            rel='noopener'
+          >
+            <img src='/public/zdj1.jpg' alt='Amulet Guardian &amp; Mystic' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Guardian &amp; Mystic</h3>
+              <p class='price-tag'>Cena: od 379 zł</p>
+            </div>
+          </a>
+          <a
+            class='product-card'
+            href='https://simkensy.com/pl/products/amulet-bogini-sensual-magnetic-742.html'
+            target='_blank'
+            rel='noopener'
+          >
+            <img src='/public/zdj1.jpg' alt='Amulet Sensual &amp; Magnetic' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Sensual &amp; Magnetic</h3>
+              <p class='price-tag'>Cena: od 379 zł</p>
+            </div>
+          </a>
+          <a
+            class='product-card'
+            href='https://simkensy.com/pl/products/amulet-selflove-861.html'
+            target='_blank'
+            rel='noopener'
+          >
+            <img src='/public/zdj1.jpg' alt='Amulet Selflove' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Selflove</h3>
+              <p class='price-tag'>Cena: od 369 zł</p>
+            </div>
+          </a>
+          <a
+            class='product-card'
+            href='https://simkensy.com/pl/products/amulet-bogini-abudance-joy-743.html'
+            target='_blank'
+            rel='noopener'
+          >
+            <img src='/public/zdj1.jpg' alt='Amulet Abundance &amp; Joy' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Abundance &amp; Joy</h3>
+              <p class='price-tag'>Cena: od 379 zł</p>
+            </div>
+          </a>
+          <a
+            class='product-card'
+            href='https://simkensy.com/pl/products/amulet-rozkwitanie-860.html'
+            target='_blank'
+            rel='noopener'
+          >
+            <img src='/public/zdj1.jpg' alt='Amulet Rozkwitanie' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Rozkwitanie</h3>
+              <p class='price-tag'>Cena: od 389 zł</p>
+            </div>
+          </a>
+          <a
+            class='product-card'
+            href='https://simkensy.com/pl/products/amulet-bogini-madrosc-przodkin-777.html'
+            target='_blank'
+            rel='noopener'
+          >
+            <img src='/public/zdj1.jpg' alt='Amulet Mądrość Przodkiń' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Mądrość Przodkiń</h3>
+              <p class='price-tag'>Cena: od 409 zł</p>
+            </div>
+          </a>
+          <a
+            class='product-card'
+            href='https://simkensy.com/pl/products/amulet-bogini-intuition-third-eye-744.html'
+            target='_blank'
+            rel='noopener'
+          >
+            <img src='/public/zdj1.jpg' alt='Amulet Intuition &amp; Third Eye' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Intuition &amp; Third Eye</h3>
+              <p class='price-tag'>Cena: od 379 zł</p>
+            </div>
+          </a>
+          <a
+            class='product-card'
+            href='https://simkensy.com/pl/products/amulet-old-money-pieniadze-863.html'
+            target='_blank'
+            rel='noopener'
+          >
+            <img src='/public/zdj1.jpg' alt='Amulet Old Money' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Old Money</h3>
+              <p class='price-tag'>Cena: od 419 zł</p>
+            </div>
+          </a>
+          <a
+            class='product-card'
+            href='https://simkensy.com/pl/products/amulet-aura-862.html'
+            target='_blank'
+            rel='noopener'
+          >
+            <img src='/public/zdj1.jpg' alt='Amulet Aura' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Aura</h3>
+              <p class='price-tag'>Cena: od 379 zł</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class='footer'>© 2025 SimonaK • Amulety Simkensy</footer>
   </body>
 </html>
-
