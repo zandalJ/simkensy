@@ -144,7 +144,7 @@
 
       .amulet-grid {
         display: grid;
-        gap: 2rem;
+        gap: 1.75rem;
       }
 
       @media (min-width: 640px) {
@@ -159,55 +159,15 @@
         }
       }
 
-      .amulet-card {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        border-radius: 1.75rem;
-        border: 1px solid rgba(109, 43, 63, 0.28);
-        background: rgba(26, 22, 20, 0.82);
-        padding: 2rem;
-        box-shadow: 0 20px 46px rgba(10, 8, 6, 0.32);
-        backdrop-filter: blur(26px);
-        transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-          border-color 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-          box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-      }
-
-      .amulet-card:hover {
-        transform: translateY(-12px);
-        border-color: rgba(200, 169, 106, 0.64);
-        box-shadow: 0 28px 56px rgba(109, 43, 63, 0.34);
-      }
-
-      .amulet-media {
-        position: relative;
-        overflow: hidden;
-        border-radius: 1.25rem;
-      }
-
-      .amulet-media::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          160deg,
-          rgba(17, 11, 10, 0.2) 10%,
-          rgba(17, 11, 10, 0.85) 100%
-        );
-        pointer-events: none;
-      }
-
-      .amulet-media img {
+      .amulet-card img {
         width: 100%;
-        height: 100%;
+        height: 220px;
         object-fit: cover;
       }
 
-      .amulet-content {
-        display: flex;
-        flex-direction: column;
-        gap: 0.85rem;
+      .amulet-card .product-body {
+        gap: 1.1rem;
+        padding: 1.85rem;
       }
 
       .amulet-emoji {
@@ -473,7 +433,7 @@
 
       @media (min-width: 1024px) {
         .product-grid {
-          grid-template-columns: repeat(4, minmax(0, 1fr));
+          grid-template-columns: repeat(3, minmax(0, 1fr));
         }
       }
 
@@ -557,11 +517,9 @@
           </p>
         </div>
         <div class='amulet-grid'>
-          <article class='amulet-card'>
-            <div class='amulet-media'>
-              <img src='/public/zdj1.jpg' alt='Amulet Inner Child' loading='lazy' />
-            </div>
-            <div class='amulet-content'>
+          <article class='product-card amulet-card'>
+            <img src='/public/zdj1.jpg' alt='Amulet Inner Child' loading='lazy' />
+            <div class='product-body'>
               <span class='amulet-emoji' aria-hidden='true'>💗</span>
               <p class='amulet-intro'>Czują, że brakuje im czułości do siebie</p>
               <h3 class='amulet-title'>Inner Child</h3>
@@ -578,11 +536,9 @@
               </a>
             </div>
           </article>
-          <article class='amulet-card'>
-            <div class='amulet-media'>
-              <img src='/public/zdj1.jpg' alt='Amulet Guardian &amp; Mystic' loading='lazy' />
-            </div>
-            <div class='amulet-content'>
+          <article class='product-card amulet-card'>
+            <img src='/public/zdj1.jpg' alt='Amulet Guardian &amp; Mystic' loading='lazy' />
+            <div class='product-body'>
               <span class='amulet-emoji' aria-hidden='true'>🖤</span>
               <p class='amulet-intro'>Dają z siebie za dużo</p>
               <h3 class='amulet-title'>Guardian &amp; Mystic</h3>
@@ -599,11 +555,9 @@
               </a>
             </div>
           </article>
-          <article class='amulet-card'>
-            <div class='amulet-media'>
-              <img src='/public/zdj1.jpg' alt='Amulet Sensual &amp; Magnetic' loading='lazy' />
-            </div>
-            <div class='amulet-content'>
+          <article class='product-card amulet-card'>
+            <img src='/public/zdj1.jpg' alt='Amulet Sensual &amp; Magnetic' loading='lazy' />
+            <div class='product-body'>
               <span class='amulet-emoji' aria-hidden='true'>💋</span>
               <p class='amulet-intro'>Chcą poczuć kobiecość i magnetyzm</p>
               <h3 class='amulet-title'>Sensual &amp; Magnetic</h3>
@@ -620,11 +574,9 @@
               </a>
             </div>
           </article>
-          <article class='amulet-card'>
-            <div class='amulet-media'>
-              <img src='/public/zdj1.jpg' alt='Amulet Selflove' loading='lazy' />
-            </div>
-            <div class='amulet-content'>
+          <article class='product-card amulet-card'>
+            <img src='/public/zdj1.jpg' alt='Amulet Selflove' loading='lazy' />
+            <div class='product-body'>
               <span class='amulet-emoji' aria-hidden='true'>💞</span>
               <p class='amulet-intro'>Chcą pokochać siebie bez warunków</p>
               <h3 class='amulet-title'>Selflove</h3>
@@ -641,11 +593,9 @@
               </a>
             </div>
           </article>
-          <article class='amulet-card'>
-            <div class='amulet-media'>
-              <img src='/public/zdj1.jpg' alt='Amulet Abundance &amp; Joy' loading='lazy' />
-            </div>
-            <div class='amulet-content'>
+          <article class='product-card amulet-card'>
+            <img src='/public/zdj1.jpg' alt='Amulet Abundance &amp; Joy' loading='lazy' />
+            <div class='product-body'>
               <span class='amulet-emoji' aria-hidden='true'>🌻</span>
               <p class='amulet-intro'>Czują, że życie stało się zbyt ciężkie</p>
               <h3 class='amulet-title'>Abundance &amp; Joy</h3>
@@ -662,11 +612,9 @@
               </a>
             </div>
           </article>
-          <article class='amulet-card'>
-            <div class='amulet-media'>
-              <img src='/public/zdj1.jpg' alt='Amulet Rozkwitanie' loading='lazy' />
-            </div>
-            <div class='amulet-content'>
+          <article class='product-card amulet-card'>
+            <img src='/public/zdj1.jpg' alt='Amulet Rozkwitanie' loading='lazy' />
+            <div class='product-body'>
               <span class='amulet-emoji' aria-hidden='true'>🌷</span>
               <p class='amulet-intro'>Są w procesie zmiany i nie wiedzą, co dalej</p>
               <h3 class='amulet-title'>Rozkwitanie</h3>
@@ -683,11 +631,9 @@
               </a>
             </div>
           </article>
-          <article class='amulet-card'>
-            <div class='amulet-media'>
-              <img src='/public/zdj1.jpg' alt='Amulet Mądrość Przodkiń' loading='lazy' />
-            </div>
-            <div class='amulet-content'>
+          <article class='product-card amulet-card'>
+            <img src='/public/zdj1.jpg' alt='Amulet Mądrość Przodkiń' loading='lazy' />
+            <div class='product-body'>
               <span class='amulet-emoji' aria-hidden='true'>🌿</span>
               <p class='amulet-intro'>Chcą poczuć siłę i wsparcie kobiet</p>
               <h3 class='amulet-title'>Mądrość Przodkiń</h3>
@@ -704,11 +650,9 @@
               </a>
             </div>
           </article>
-          <article class='amulet-card'>
-            <div class='amulet-media'>
-              <img src='/public/zdj1.jpg' alt='Amulet Intuition &amp; Third Eye' loading='lazy' />
-            </div>
-            <div class='amulet-content'>
+          <article class='product-card amulet-card'>
+            <img src='/public/zdj1.jpg' alt='Amulet Intuition &amp; Third Eye' loading='lazy' />
+            <div class='product-body'>
               <span class='amulet-emoji' aria-hidden='true'>💙</span>
               <p class='amulet-intro'>Chcą bardziej ufać sobie</p>
               <h3 class='amulet-title'>Intuition &amp; Third Eye</h3>
@@ -725,11 +669,9 @@
               </a>
             </div>
           </article>
-          <article class='amulet-card'>
-            <div class='amulet-media'>
-              <img src='/public/zdj1.jpg' alt='Amulet Old Money' loading='lazy' />
-            </div>
-            <div class='amulet-content'>
+          <article class='product-card amulet-card'>
+            <img src='/public/zdj1.jpg' alt='Amulet Old Money' loading='lazy' />
+            <div class='product-body'>
               <span class='amulet-emoji' aria-hidden='true'>💰</span>
               <p class='amulet-intro'>Chcą czuć się pewnie w relacji z pieniędzmi</p>
               <h3 class='amulet-title'>Old Money</h3>
@@ -746,11 +688,9 @@
               </a>
             </div>
           </article>
-          <article class='amulet-card'>
-            <div class='amulet-media'>
-              <img src='/public/zdj1.jpg' alt='Amulet Aura' loading='lazy' />
-            </div>
-            <div class='amulet-content'>
+          <article class='product-card amulet-card'>
+            <img src='/public/zdj1.jpg' alt='Amulet Aura' loading='lazy' />
+            <div class='product-body'>
               <span class='amulet-emoji' aria-hidden='true'>🌊</span>
               <p class='amulet-intro'>Chcą czuć się piękne i spokojne</p>
               <h3 class='amulet-title'>Aura</h3>
