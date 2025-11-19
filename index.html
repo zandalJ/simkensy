@@ -111,6 +111,24 @@
         text-wrap: balance; /* Dla lepszego układu tekstu */
       }
 
+      .hero-title-line {
+        display: block;
+      }
+
+      .hero-title-line + .hero-title-line {
+        margin-top: 0.5em;
+      }
+
+      .hero-title-line--tight {
+        letter-spacing: 0.18em;
+      }
+
+      @media (max-width: 640px) {
+        .hero-title-line + .hero-title-line {
+          margin-top: 0.35em;
+        }
+      }
+
       .hero-cta {
         min-width: 240px;
         justify-content: center;
@@ -751,7 +769,9 @@
       </div>
       <div class='hero-content'>
         <h1 class='hero-title'>
-          Chcesz w&nbsp;końcu poczuć spokój, pewność i&nbsp;lekkość w&nbsp;codzienności?
+          <span class='hero-title-line'>Chcesz w&nbsp;końcu poczuć spokój, pewność</span>
+          <span class='hero-title-line'>i&nbsp;lekkość</span>
+          <span class='hero-title-line hero-title-line--tight'>w&nbsp;codzienności?</span>
         </h1>
         <a class='hero-cta' href='#amulets'>Tego pragnę</a>
       </div>
