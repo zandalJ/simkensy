@@ -27,7 +27,9 @@
       :root {
         --claret: #6d2b3f;
         --claret-soft: rgba(109, 43, 63, 0.74);
-        --champagne: rgba(244, 232, 211, 0.92);
+        --champagne: #fbf2e0; /* Jaśniejszy, bardziej "luxury" beż */
+        --champagne-dim: rgba(251, 242, 224, 0.85);
+        --gold: #d4af37; /* Bardziej złoty odcień */
       }
 
       .hero {
@@ -88,12 +90,12 @@
         gap: 0.5rem;
         padding: 0.5rem 1.75rem;
         border-radius: 999px;
-        border: 1px solid rgba(200, 169, 106, 0.52);
+        border: 1px solid rgba(212, 175, 55, 0.52); /* Jaśniejsze złoto */
         font-family: 'Space Grotesk', sans-serif;
         font-size: 0.7rem;
         text-transform: uppercase;
         letter-spacing: 0.4em;
-        color: rgba(244, 232, 211, 0.75);
+        color: var(--champagne); /* Jaśniejszy kolor */
         background-color: rgba(17, 11, 10, 0.55);
         backdrop-filter: blur(14px);
       }
@@ -104,8 +106,9 @@
         line-height: 1.25;
         letter-spacing: 0.22em;
         text-transform: uppercase;
-        color: rgb(244, 232, 211);
+        color: var(--champagne);
         text-shadow: 0 18px 42px rgba(0, 0, 0, 0.48);
+        text-wrap: balance; /* Dla lepszego układu tekstu */
       }
 
       .hero-cta {
@@ -113,17 +116,24 @@
         justify-content: center;
         text-align: center;
         border-color: rgba(244, 232, 211, 0.9);
-        background-image: linear-gradient(120deg, rgba(244, 232, 211, 0.95) 0%, rgba(200, 169, 106, 0.95) 100%);
-        color: #1a1614;
+        background-image: linear-gradient(120deg, rgba(244, 232, 211, 0.95) 0%, rgba(212, 175, 55, 0.95) 100%); /* Jaśniejsze złoto */
+        color: #0b0908 !important; /* Ciemny kolor dla kontrastu */
         font-weight: 600;
         text-shadow: none;
         box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+        padding: 1rem 2rem;
+        border-radius: 999px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.3s ease;
       }
 
       .hero-cta:hover {
-        color: #1a1614;
-        border-color: rgba(200, 169, 106, 0.9);
-        background-image: linear-gradient(120deg, rgba(244, 232, 211, 1) 0%, rgba(200, 169, 106, 1) 100%);
+        color: #000000 !important;
+        border-color: rgba(212, 175, 55, 0.9);
+        background-image: linear-gradient(120deg, rgba(244, 232, 211, 1) 0%, rgba(212, 175, 55, 1) 100%);
+        transform: translateY(-2px);
       }
 
       main {
@@ -145,20 +155,20 @@
       }
 
       .section-intro {
-        max-width: 44rem;
-        margin: 0 auto 3rem auto;
+        max-width: 48rem;
+        margin: 0 auto 3.5rem auto;
         text-align: center;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.25rem;
       }
 
       .section-eyebrow {
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 0.75rem;
+        font-size: 0.875rem; /* Zwiększone z 0.75rem (12px -> 14px) */
         letter-spacing: 0.5em;
         text-transform: uppercase;
-        color: rgba(200, 169, 106, 0.72);
+        color: rgba(212, 175, 55, 0.85); /* Użycie nowego złota */
       }
 
       .section-heading {
@@ -166,13 +176,15 @@
         font-size: clamp(2rem, 3vw, 3rem);
         letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: rgb(231, 214, 193);
+        color: var(--champagne);
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+        text-wrap: balance;
       }
 
       .section-subheading {
-        font-size: 1rem;
-        line-height: 1.7;
-        color: rgba(244, 232, 211, 0.72);
+        font-size: 1.1rem; /* Zwiększone z 1rem (16px -> ~17.6px) */
+        line-height: 1.75;
+        color: var(--champagne-dim);
       }
 
       .amulet-grid {
@@ -208,13 +220,15 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 1.1rem;
-        padding: 1.85rem;
+        align-items: center; /* Wyśrodkowanie */
+        text-align: center; /* Wyśrodkowanie tekstu */
+        gap: 1.25rem;
+        padding: 2rem 1.5rem;
       }
 
       .amulet-card .amulet-cta {
         margin-top: auto;
-        align-self: flex-start;
+        /* align-self: flex-start; Usunięte, aby przycisk był na środku */
       }
 
       .cta-icon {
@@ -227,6 +241,12 @@
         border: 1px solid rgba(26, 22, 20, 0.4);
         background-color: rgba(26, 22, 20, 0.08);
         margin-right: 0.75rem;
+      }
+
+      /* Dodano dla wyśrodkowania przycisku głównego */
+      .hero-content {
+        align-items: center;
+        text-align: center;
       }
 
       .cta-icon svg {
@@ -259,24 +279,30 @@
 
       .amulet-intro {
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 0.85rem;
+        font-size: 0.95rem; /* Zwiększone z 0.85rem */
         text-transform: uppercase;
-        letter-spacing: 0.32em;
-        color: rgba(244, 232, 211, 0.62);
+        letter-spacing: 0.25em;
+        color: #e8dcc5; /* Jaśniejszy kolor dla lepszej widoczności */
+        font-weight: 500;
+        margin-bottom: 0.25rem;
+        background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.15), transparent);
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        width: 100%;
       }
 
       .amulet-title {
         font-family: 'Playfair Display', serif;
-        font-size: 1.6rem;
+        font-size: 1.75rem;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: rgb(231, 214, 193);
+        color: var(--champagne);
       }
 
       .amulet-copy {
-        font-size: 0.98rem;
+        font-size: 1.05rem; /* Zwiększone */
         line-height: 1.8;
-        color: rgba(244, 232, 211, 0.75);
+        color: var(--champagne-dim);
       }
 
       .amulet-cta {
@@ -284,12 +310,12 @@
         align-items: center;
         justify-content: center;
         gap: 0.5rem;
-        margin-top: 1rem;
+        margin-top: 1.5rem; /* Większy odstęp */
         border-radius: 999px;
         border: 1px solid rgba(109, 43, 63, 0.68);
-        padding: 0.65rem 1.75rem;
+        padding: 0.8rem 2rem; /* Większy przycisk */
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 0.75rem;
+        font-size: 0.85rem; /* Większa czcionka */
         letter-spacing: 0.32em;
         text-transform: uppercase;
         color: rgb(244, 232, 211);
@@ -301,6 +327,7 @@
         box-shadow: 0 18px 34px rgba(109, 43, 63, 0.28);
         transition: transform 0.3s ease, box-shadow 0.3s ease,
           border-color 0.3s ease;
+        text-decoration: none;
       }
 
       .amulet-cta:hover {
@@ -355,52 +382,71 @@
         color: rgba(244, 232, 211, 0.78);
       }
 
+      /* Nowy styl dla sekcji "To nie jest zwykła biżuteria" */
+      .energy-grid-container {
+        display: grid;
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      
+      @media (min-width: 768px) {
+        .energy-grid-container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .energy-feature-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        transition: transform 0.3s ease;
+      }
+      
+      .energy-feature-item:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .energy-icon-box {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        background: linear-gradient(135deg, rgba(109, 43, 63, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%);
+        color: var(--gold);
+        font-size: 1.5rem;
+      }
+
+      .energy-feature-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--champagne-dim);
+      }
+
       .energy-pill {
         display: inline-flex;
         align-items: center;
         gap: 0.45rem;
         border-radius: 999px;
-        border: 1px solid rgba(200, 169, 106, 0.25);
-        padding: 0.35rem 1.4rem;
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        padding: 0.5rem 1.75rem;
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 0.78rem;
+        font-size: 0.85rem;
         letter-spacing: 0.32em;
         text-transform: uppercase;
-        color: rgba(244, 232, 211, 0.7);
+        color: var(--champagne);
         background-color: rgba(17, 11, 10, 0.5);
         margin-bottom: 1.5rem;
-      }
-
-      .energy-list {
-        margin-top: 2rem;
-        display: grid;
-        gap: 1rem;
-        text-align: left;
-      }
-
-      @media (min-width: 640px) {
-        .energy-list {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-      }
-
-      .energy-list li {
-        display: flex;
-        align-items: flex-start;
-        gap: 0.8rem;
-        font-size: 0.92rem;
-        line-height: 1.6;
-        color: rgba(244, 232, 211, 0.78);
-      }
-
-      .energy-list li::before {
-        content: '';
-        margin-top: 0.45rem;
-        width: 0.5rem;
-        height: 0.5rem;
-        border-radius: 999px;
-        border: 1px solid rgba(200, 169, 106, 0.6);
-        background-color: rgba(109, 43, 63, 0.5);
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
       }
 
       .feature-grid {
@@ -419,11 +465,13 @@
         position: relative;
         display: flex;
         flex-direction: column;
+        align-items: center; /* Wyśrodkowanie */
+        text-align: center; /* Wyśrodkowanie */
         gap: 1.25rem;
         border-radius: 1.6rem;
         border: 1px solid rgba(244, 232, 211, 0.08);
         background: rgba(26, 22, 20, 0.85);
-        padding: 2rem;
+        padding: 2.5rem 2rem; /* Większy padding */
         box-shadow: 0 22px 50px rgba(10, 8, 6, 0.35);
         overflow: hidden;
       }
@@ -465,9 +513,9 @@
       }
 
       .feature-copy {
-        font-size: 0.95rem;
+        font-size: 1rem; /* Zwiększone */
         line-height: 1.7;
-        color: rgba(244, 232, 211, 0.72);
+        color: var(--champagne-dim);
       }
 
       .section-cta {
@@ -507,8 +555,11 @@
       .step-card {
         position: relative;
         display: flex;
-        gap: 1rem;
-        padding: 1.85rem;
+        flex-direction: column; /* Zmiana na kolumnę dla wyśrodkowania */
+        align-items: center; /* Wyśrodkowanie */
+        text-align: center; /* Wyśrodkowanie */
+        gap: 1.5rem;
+        padding: 2.5rem 2rem;
         border-radius: 1.8rem;
         border: 1px solid rgba(109, 43, 63, 0.35);
         background: linear-gradient(145deg, rgba(26, 22, 20, 0.9), rgba(27, 17, 19, 0.7));
@@ -556,9 +607,9 @@
       }
 
       .step-body p {
-        font-size: 0.96rem;
+        font-size: 1.05rem; /* Zwiększone z 0.96rem */
         line-height: 1.75;
-        color: rgba(244, 232, 211, 0.7);
+        color: var(--champagne-dim);
       }
 
       .section-testimonials .section-subheading {
@@ -588,18 +639,20 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        padding: 2rem;
+        padding: 2.5rem;
         border-radius: 1.5rem;
-        border: 1px solid rgba(200, 169, 106, 0.22);
+        border: 1px solid rgba(212, 175, 55, 0.22); /* Złota ramka */
         background: rgba(26, 22, 20, 0.75);
         backdrop-filter: blur(22px);
         box-shadow: 0 18px 42px rgba(10, 8, 6, 0.3);
+        text-align: center; /* Wyśrodkowanie opinii */
+        align-items: center;
       }
 
       .testimonial-quote {
-        font-size: 0.96rem;
+        font-size: 1.05rem; /* Zwiększone z 0.96rem */
         line-height: 1.8;
-        color: rgba(244, 232, 211, 0.8);
+        color: rgba(244, 232, 211, 0.85); /* Jaśniejszy tekst */
       }
 
       .testimonial-author {
@@ -646,20 +699,22 @@
 
       .product-card:hover {
         transform: translateY(-10px);
-        border-color: rgba(200, 169, 106, 0.65);
+        border-color: rgba(212, 175, 55, 0.65);
       }
 
       .product-card img {
         width: 100%;
-        height: 220px;
+        height: 240px; /* Lekko powiększone zdjęcia */
         object-fit: cover;
       }
 
       .product-body {
-        padding: 1.75rem;
+        padding: 2rem;
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        align-items: center; /* Wyśrodkowanie */
+        text-align: center; /* Wyśrodkowanie */
+        gap: 1rem;
       }
 
       .product-title {
@@ -696,9 +751,9 @@
       </div>
       <div class='hero-content'>
         <h1 class='hero-title'>
-          Chcesz w końcu poczuć spokój, pewność i lekkość w codzienności?
+          Chcesz w&nbsp;końcu poczuć spokój, pewność i&nbsp;lekkość w&nbsp;codzienności?
         </h1>
-        <a class='cta-button hero-cta' href='#amulets'>Tego pragnę</a>
+        <a class='hero-cta' href='#amulets'>Tego pragnę</a>
       </div>
     </header>
     <main>
@@ -708,7 +763,7 @@
             <p class='section-eyebrow'>Twoja codzienna aura</p>
             <h2 class='section-heading'>Amulety Simkensy powstały dla kobiet takich jak Ty</h2>
             <p class='section-subheading'>
-              które pragną czuć bliskość ze sobą, mieć wsparcie swojej intuicji i z czułością celebrować każdy dzień.
+              które pragną czuć bliskość ze&nbsp;sobą, mieć wsparcie swojej intuicji i&nbsp;z&nbsp;czułością celebrować każdy dzień.
             </p>
           </div>
           <div class='amulet-grid'>
@@ -720,10 +775,10 @@
                 <path d='M12 19s-6-3.3-6-7.6c0-2.3 1.8-4.1 3.9-4.1 1.3 0 2.5.7 3.1 1.9.6-1.2 1.8-1.9 3.1-1.9 2.1 0 3.9 1.8 3.9 4.1 0 4.3-6 7.6-6 7.6z' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/>
                 </svg>
             </span>
-              <p class='amulet-intro'>Czują, że brakuje im czułości do siebie</p>
+              <p class='amulet-intro'>Czują, że brakuje im czułości do&nbsp;siebie</p>
               <h3 class='amulet-title'>Inner Child</h3>
               <p class='amulet-copy'>
-                Inner Child przypomina, że jesteś wystarczająca i zasługujesz na troskę, nawet gdy nie wszystko się układa.
+                Inner Child przypomina, że jesteś wystarczająca i&nbsp;zasługujesz na&nbsp;troskę, nawet gdy nie wszystko się układa.
               </p>
               <a
                 class='amulet-cta'
@@ -744,10 +799,10 @@
                 <path d='M10.5 11.5l1.5 1.6 1.5-1.6' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/>
                 </svg>
             </span>
-              <p class='amulet-intro'>Dają z siebie za dużo</p>
+              <p class='amulet-intro'>Dają z&nbsp;siebie za&nbsp;dużo</p>
               <h3 class='amulet-title'>Guardian &amp; Mystic</h3>
               <p class='amulet-copy'>
-                Guardian &amp; Mystic pomaga postawić granice i ochronić energię, żebyś miała siłę dla siebie.
+                Guardian &amp; Mystic pomaga postawić granice i&nbsp;ochronić energię, żebyś miała siłę dla siebie.
               </p>
               <a
                 class='amulet-cta'
@@ -768,10 +823,10 @@
                 <path d='M5.2 12.1c1 .7 3 1.7 6.8 1.7s5.8-1 6.8-1.7' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/>
                 </svg>
             </span>
-              <p class='amulet-intro'>Chcą poczuć kobiecość i magnetyzm</p>
+              <p class='amulet-intro'>Chcą poczuć kobiecość i&nbsp;magnetyzm</p>
               <h3 class='amulet-title'>Sensual &amp; Magnetic</h3>
               <p class='amulet-copy'>
-                Sensual &amp; Magnetic wzmacnia energię pewności siebie, zmysłowości i wewnętrznej atrakcyjności.
+                Sensual &amp; Magnetic wzmacnia energię pewności siebie, zmysłowości i&nbsp;wewnętrznej atrakcyjności.
               </p>
               <a
                 class='amulet-cta'
@@ -795,7 +850,7 @@
               <p class='amulet-intro'>Chcą pokochać siebie bez warunków</p>
               <h3 class='amulet-title'>Selflove</h3>
               <p class='amulet-copy'>
-                Selflove pomaga widzieć w sobie wartość niezależnie od opinii innych i codziennych potknięć.
+                Selflove pomaga widzieć w&nbsp;sobie wartość niezależnie od&nbsp;opinii innych i&nbsp;codziennych potknięć.
               </p>
               <a
                 class='amulet-cta'
@@ -819,7 +874,7 @@
               <p class='amulet-intro'>Czują, że życie stało się zbyt ciężkie</p>
               <h3 class='amulet-title'>Abundance &amp; Joy</h3>
               <p class='amulet-copy'>
-                Abundance &amp; Joy przywołuje lekkość i radość, bez presji i bez pośpiechu.
+                Abundance &amp; Joy przywołuje lekkość i&nbsp;radość, bez presji i&nbsp;bez pośpiechu.
               </p>
               <a
                 class='amulet-cta'
@@ -840,10 +895,10 @@
                 <path d='M12 12v6.2M9.2 16.1c1 .4 1.8 1.4 2.8 3 1-1.6 1.8-2.6 2.8-3' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/>
                 </svg>
             </span>
-              <p class='amulet-intro'>Są w procesie zmiany i nie wiedzą, co dalej</p>
+              <p class='amulet-intro'>Są w&nbsp;procesie zmiany i&nbsp;nie wiedzą, co dalej</p>
               <h3 class='amulet-title'>Rozkwitanie</h3>
               <p class='amulet-copy'>
-                Rozkwitanie wspiera zaufanie do procesu i przypomina, że nie musisz się spieszyć.
+                Rozkwitanie wspiera zaufanie do&nbsp;procesu i&nbsp;przypomina, że nie musisz się spieszyć.
               </p>
               <a
                 class='amulet-cta'
@@ -864,10 +919,10 @@
                 <path d='M9.5 10.8c1.2 1.1 2.3 2.4 3.2 4.1M13 9c.9.8 1.6 1.8 2.1 3' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round'/>
                 </svg>
             </span>
-              <p class='amulet-intro'>Chcą poczuć siłę i wsparcie kobiet</p>
+              <p class='amulet-intro'>Chcą poczuć siłę i&nbsp;wsparcie kobiet</p>
               <h3 class='amulet-title'>Mądrość Przodkiń</h3>
               <p class='amulet-copy'>
-                Mądrość Przodkiń łączy Cię z energią pokoleń, które też miały odwagę żyć po swojemu.
+                Mądrość Przodkiń łączy Cię z&nbsp;energią pokoleń, które też miały odwagę żyć po&nbsp;swojemu.
               </p>
               <a
                 class='amulet-cta'
@@ -892,7 +947,7 @@
               <p class='amulet-intro'>Chcą bardziej ufać sobie</p>
               <h3 class='amulet-title'>Intuition &amp; Third Eye</h3>
               <p class='amulet-copy'>
-                Intuition &amp; Third Eye pomaga wrócić do intuicji i spokoju wewnętrznego głosu.
+                Intuition &amp; Third Eye pomaga wrócić do&nbsp;intuicji i&nbsp;spokoju wewnętrznego głosu.
               </p>
               <a
                 class='amulet-cta'
@@ -914,10 +969,10 @@
                 <path d='M14 14.2c-.6.7-1.4 1-2.3 1-1.1 0-1.9-.5-2.3-1' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round'/>
                 </svg>
             </span>
-              <p class='amulet-intro'>Chcą czuć się pewnie w relacji z pieniędzmi</p>
+              <p class='amulet-intro'>Chcą czuć się pewnie w&nbsp;relacji z&nbsp;pieniędzmi</p>
               <h3 class='amulet-title'>Old Money</h3>
               <p class='amulet-copy'>
-                Old Money przypomina, że obfitość to Twój naturalny stan, nie coś, o co musisz walczyć.
+                Old Money przypomina, że obfitość to&nbsp;Twój naturalny stan, nie coś, o&nbsp;co musisz walczyć.
               </p>
               <a
                 class='amulet-cta'
@@ -938,10 +993,10 @@
                 <path d='M4.5 11.5c1.2-.9 2.5-.9 3.7 0s2.5.9 3.7 0 2.5-.9 3.7 0 2.5.9 3.7 0' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/>
                 </svg>
             </span>
-              <p class='amulet-intro'>Chcą czuć się piękne i spokojne</p>
+              <p class='amulet-intro'>Chcą czuć się piękne i&nbsp;spokojne</p>
               <h3 class='amulet-title'>Aura</h3>
               <p class='amulet-copy'>
-                Aura wzmacnia poczucie harmonii i autentycznego piękna w codzienności.
+                Aura wzmacnia poczucie harmonii i&nbsp;autentycznego piękna w&nbsp;codzienności.
               </p>
               <a
                 class='amulet-cta'
@@ -960,19 +1015,34 @@
         <div class='section-shell'>
           <div class='section-intro'>
             <h2 class='section-heading'>To nie jest zwykła biżuteria</h2>
-            <p class='section-subheading'>to coś co wspiera Twoją energię każdego dnia.</p>
+            <p class='section-subheading'>to coś, co wspiera Twoją energię każdego dnia.</p>
           </div>
           <div class='energy-card'>
             <span class='energy-pill'>Codzienna harmonia</span>
             <p>
-              Każdy amulet powstaje z intencją bycia delikatną kotwicą, która przypomina Ci o tym, kim jesteś i dokąd zmierzasz.
-              Towarzyszy Ci w codziennych rytuałach, pomaga oddychać głębiej, wracać do siebie i budować zaufanie do własnych wyborów.
+              Każdy amulet powstaje z&nbsp;intencją bycia delikatną kotwicą, która przypomina Ci o&nbsp;tym, kim jesteś i&nbsp;dokąd zmierzasz.
+              Towarzyszy Ci w&nbsp;codziennych rytuałach, pomaga oddychać głębiej, wracać do&nbsp;siebie i&nbsp;budować zaufanie do&nbsp;własnych wyborów.
             </p>
-            <ul class='energy-list'>
-              <li>Przypomina o wyborze siebie – nawet w najbardziej zabieganym dniu.</li>
-              <li>Łagodzi umysł krótkim momentem zatrzymania, gdy czujesz wewnętrzny chaos.</li>
-              <li>Wzmacnia poczucie sensu, bo nosisz przy sobie własną intencję i historię.</li>
-            </ul>
+            <div class='energy-grid-container'>
+              <div class='energy-feature-item'>
+                 <div class='energy-icon-box'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                 </div>
+                 <p class='energy-feature-text'>Przypomina o&nbsp;wyborze siebie – nawet w&nbsp;najbardziej zabieganym dniu.</p>
+              </div>
+              <div class='energy-feature-item'>
+                 <div class='energy-icon-box'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                 </div>
+                 <p class='energy-feature-text'>Łagodzi umysł krótkim momentem zatrzymania, gdy czujesz wewnętrzny chaos.</p>
+              </div>
+              <div class='energy-feature-item'>
+                 <div class='energy-icon-box'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                 </div>
+                 <p class='energy-feature-text'>Wzmacnia poczucie sensu, bo nosisz przy sobie własną intencję i&nbsp;historię.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -982,7 +1052,7 @@
             <p class='section-eyebrow'>Ręczne wykonanie</p>
             <h2 class='section-heading'>Nie ma dwóch takich samych</h2>
             <p class='section-subheading'>
-              Amulety wykonuję ręcznie z wyjątkowych materiałów, mających swoją historię i znaczenie – dlatego każdy jest inny, tak jak Ty.
+              Amulety wykonuję ręcznie z&nbsp;wyjątkowych materiałów, mających swoją historię i&nbsp;znaczenie – dlatego każdy jest inny, tak jak Ty.
             </p>
           </div>
           <div class='feature-grid'>
@@ -990,33 +1060,33 @@
             <span class='feature-emoji' aria-hidden='true'>✺</span>
             <h3 class='feature-title'>Prawdziwe kwiaty i symbole natury</h3>
             <p class='feature-copy'>
-              Zatrzymujemy ulotne detale świata roślin, żeby przypominały o cykliczności, wdzięczności i łagodności dla siebie.
+              Zatrzymujemy ulotne detale świata roślin, żeby przypominały o&nbsp;cykliczności, wdzięczności i&nbsp;łagodności dla siebie.
             </p>
           </article>
           <article class='feature-card'>
             <span class='feature-emoji' aria-hidden='true'>✧</span>
             <h3 class='feature-title'>Piasek i muszle z wyjątkowych miejsc</h3>
             <p class='feature-copy'>
-              Zamykamy w żywicy fragmenty ważnych podróży, abyś mogła wracać do energii miejsc, które napełniają Cię spokojem.
+              Zamykamy w&nbsp;żywicy fragmenty ważnych podróży, abyś mogła wracać do&nbsp;energii miejsc, które napełniają Cię spokojem.
             </p>
           </article>
           <article class='feature-card'>
             <span class='feature-emoji' aria-hidden='true'>∞</span>
             <h3 class='feature-title'>Przedmioty, które mają dla Ciebie znaczenie</h3>
             <p class='feature-copy'>
-              Wplatamy w amulet drobiazgi, które kojarzą Ci się z miłością, wsparciem i Twoją wewnętrzną mądrością.
+              Wplatamy w&nbsp;amulet drobiazgi, które kojarzą Ci się z&nbsp;miłością, wsparciem i&nbsp;Twoją wewnętrzną mądrością.
             </p>
           </article>
           <article class='feature-card'>
             <span class='feature-emoji' aria-hidden='true'>❁</span>
             <h3 class='feature-title'>Pamiątki opowiadające Twoją historię</h3>
             <p class='feature-copy'>
-              Zachowujemy wspomnienia – od płatków z bukietu ślubnego po listy i symbole bliskich osób, aby towarzyszyły Ci każdego dnia.
+              Zachowujemy wspomnienia – od&nbsp;płatków z&nbsp;bukietu ślubnego po&nbsp;listy i&nbsp;symbole bliskich osób, aby towarzyszyły Ci każdego dnia.
             </p>
           </article>
           </div>
         <div class='section-cta'>
-          <a class='cta-button' href='#choose'>Wybierz swój</a>
+          <a class='hero-cta' href='#choose'>Wybierz swój</a>
         </div>
         </div>
       </section>
@@ -1026,7 +1096,7 @@
             <p class='section-eyebrow'>Rytuał intencji</p>
             <h2 class='section-heading'>Jak działa Twój amulet?</h2>
             <p class='section-subheading'>
-              Każdy amulet ma znaczenie, ale nabiera mocy dopiero wtedy, gdy połączysz go ze swoją intencją.
+              Każdy amulet ma znaczenie, ale nabiera mocy dopiero wtedy, gdy połączysz go ze&nbsp;swoją intencją.
             </p>
           </div>
           <div class='step-grid'>
@@ -1035,7 +1105,7 @@
             <div class='step-body'>
               <h3>Wybierasz ten, który Cię przyciąga</h3>
               <p>
-                Nie analizujesz — po prostu czujesz, który wzór „woła” właśnie Ciebie. To ten moment, w którym zaczyna się proces.
+                Nie analizujesz — po&nbsp;prostu czujesz, który wzór „woła” właśnie Ciebie. To&nbsp;ten moment, w&nbsp;którym zaczyna się proces.
               </p>
             </div>
           </div>
@@ -1044,7 +1114,7 @@
             <div class='step-body'>
               <h3>Składasz zamówienie</h3>
               <p>
-                Przygotowuję Twój amulet z wyjątkowych elementów: kwiatów, piasku, muszli czy przedmiotów, które mają znaczenie.
+                Przygotowuję Twój amulet z&nbsp;wyjątkowych elementów: kwiatów, piasku, muszli czy przedmiotów, które mają znaczenie.
               </p>
             </div>
           </div>
@@ -1053,7 +1123,7 @@
             <div class='step-body'>
               <h3>Otrzymujesz paczkę z rytuałem założenia</h3>
               <p>
-                W środku znajdziesz prostą praktykę, która pomoże Ci połączyć się z energią amuletu i intencji, z którą go nosisz.
+                W&nbsp;środku znajdziesz prostą praktykę, która pomoże Ci połączyć się z&nbsp;energią amuletu i&nbsp;intencji, z&nbsp;którą go nosisz.
               </p>
             </div>
           </div>
@@ -1062,7 +1132,7 @@
             <div class='step-body'>
               <h3>Zakładasz go po raz pierwszy</h3>
               <p>
-                To Twój symboliczny moment wyboru siebie — od teraz amulet towarzyszy Ci w codzienności, przypominając o Twojej mocy.
+                To&nbsp;Twój symboliczny moment wyboru siebie — od&nbsp;teraz amulet towarzyszy Ci w&nbsp;codzienności, przypominając o&nbsp;Twojej mocy.
               </p>
             </div>
           </div>
@@ -1071,13 +1141,13 @@
             <div class='step-body'>
               <h3>Amulet staje się Twoją kotwicą</h3>
               <p>
-                Pomaga wracać do spokoju, pewności i zaufania, ilekroć zaczynasz o tym zapominać. To nie magia — to Twój nowy, namacalny punkt odniesienia.
+                Pomaga wracać do&nbsp;spokoju, pewności i&nbsp;zaufania, ilekroć zaczynasz o&nbsp;tym zapominać. To&nbsp;nie magia — to&nbsp;Twój nowy, namacalny punkt odniesienia.
               </p>
             </div>
           </div>
           </div>
           <div class='section-cta'>
-            <a class='cta-button' href='#choose'>
+            <a class='hero-cta' href='#choose'>
               Wybierz swój amulet
             </a>
           </div>
@@ -1089,19 +1159,19 @@
             <p class='section-eyebrow'>Głosy kobiet</p>
             <h2 class='section-heading'>Opinie</h2>
             <p class='section-subheading'>
-              Historie kobiet, które wybrały swoje amulety i odkryły w nich codzienne źródło spokoju i pewności.
+              Historie kobiet, które wybrały swoje amulety i&nbsp;odkryły w&nbsp;nich codzienne źródło spokoju i&nbsp;pewności.
             </p>
           </div>
           <div class='testimonial-grid'>
           <article class='testimonial-card'>
             <p class='testimonial-quote'>
-              „Każdego poranka zakładam Inner Child i wracam do miękkości. To mała biżuteria, a zmienia sposób, w jaki traktuję siebie.”
+              „Każdego poranka zakładam Inner Child i&nbsp;wracam do&nbsp;miękkości. To&nbsp;mała biżuteria, a&nbsp;zmienia sposób, w&nbsp;jaki traktuję siebie.”
             </p>
             <p class='testimonial-author'>Magda, Warszawa</p>
           </article>
           <article class='testimonial-card'>
             <p class='testimonial-quote'>
-              „Guardian &amp; Mystic to mój talizman granic. Noszę go na spotkaniach biznesowych i czuję, że mam wokół siebie ochronną bańkę.”
+              „Guardian &amp; Mystic to&nbsp;mój talizman granic. Noszę go na&nbsp;spotkaniach biznesowych i&nbsp;czuję, że mam wokół siebie ochronną bańkę.”
             </p>
             <p class='testimonial-author'>Iza, Berlin</p>
           </article>
@@ -1119,7 +1189,7 @@
             <p class='section-eyebrow'>Wybierz swój amulet</p>
             <h2 class='section-heading'>Gotowe, by wspierać Twoją energię</h2>
             <p class='section-subheading'>
-              Powtórzone wzory z kolekcji — zdecyduj, który będzie Twoim codziennym symbolem.
+              Powtórzone wzory z&nbsp;kolekcji — zdecyduj, który będzie Twoim codziennym symbolem.
             </p>
           </div>
           <div class='product-grid'>
