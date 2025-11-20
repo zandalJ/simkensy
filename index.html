@@ -146,7 +146,9 @@
         justify-content: center;
         text-align: center;
         border-color: rgba(244, 232, 211, 0.9);
-        background-image: linear-gradient(120deg, rgba(244, 232, 211, 0.95) 0%, rgba(212, 175, 55, 0.95) 100%); /* Jaśniejsze złoto */
+        background: linear-gradient(120deg, rgba(244, 232, 211, 0.95) 0%, rgba(212, 175, 55, 0.95) 45%, #fff 50%, rgba(212, 175, 55, 0.95) 55%, rgba(244, 232, 211, 0.95) 100%);
+        background-size: 200% auto;
+        background-position: 0% center;
         color: #0b0908 !important; /* Ciemny kolor dla kontrastu */
         font-weight: 600;
         font-size: 1.125rem;
@@ -157,14 +159,17 @@
         text-decoration: none;
         display: inline-flex;
         align-items: center;
-        transition: all 0.3s ease;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: visible;
       }
 
       .hero-cta:hover {
         color: #000000 !important;
-        border-color: rgba(212, 175, 55, 0.9);
-        background-image: linear-gradient(120deg, rgba(244, 232, 211, 1) 0%, rgba(212, 175, 55, 1) 100%);
-        transform: translateY(-2px);
+        border-color: rgba(212, 175, 55, 1);
+        background-position: 100% center;
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 35px 70px rgba(212, 175, 55, 0.3);
       }
 
       main {
@@ -261,12 +266,54 @@
         height: 100%;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 1.75rem;
       }
 
-      .amulet-card img {
+      .section-amulets .product-card {
+        padding: 2.5rem 2rem 2rem;
+      }
+
+      .amulet-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 5.5rem;
+        height: 5.5rem;
+        border-radius: 999px;
+        background: radial-gradient(135deg, rgba(212, 175, 55, 0.28), rgba(84, 26, 43, 0.9));
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), inset 0 0 18px rgba(212, 175, 55, 0.18);
+        color: rgba(244, 232, 211, 0.92);
+        flex-shrink: 0;
+      }
+
+      .amulet-icon svg {
+        width: 2.75rem;
+        height: 2.75rem;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .amulet-image-block {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
         width: 100%;
-        height: 220px;
-        object-fit: cover;
+        min-height: 0;
+        padding: 0;
+      }
+
+      .amulet-image-block img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
       }
 
       .amulet-card .product-body {
@@ -303,12 +350,55 @@
         filter: drop-shadow(0 0 2px rgba(255, 215, 0, 0.5));
       }
 
+      .amulet-header-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+      }
+
       .amulet-title {
         font-family: 'Playfair Display', serif;
         font-size: calc(1.75rem - 3px);
         letter-spacing: 0.18em;
         text-transform: uppercase;
         color: var(--champagne);
+        background: linear-gradient(125deg, #541a2b 0%, #6d2b3f 45%, #8a3d55 50%, #6d2b3f 55%, #541a2b 100%);
+        background-size: 200% auto;
+        background-position: 0% center;
+        padding: 0.75rem 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        margin-bottom: 0;
+        /* Equal height settings */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 7.5rem; /* Adjust based on content */
+        width: 100%;
+        position: relative; /* Ensure relative positioning context if needed */
+      }
+
+      .title-wrapper {
+        position: relative;
+        margin-bottom: 3rem;
+      }
+
+      .title-wrapper .amulet-title {
+        margin-bottom: 0;
+      }
+
+      .hanging-amulet {
+        display: block;
+        width: 60px;
+        height: auto;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: -12px;
+        z-index: 20;
+        filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
       }
 
       .amulet-copy {
@@ -316,6 +406,17 @@
         line-height: 1.8;
         color: var(--champagne-dim);
         margin-top: 0;
+      }
+
+      .amulet-name-highlight {
+        display: block;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 0.35rem;
       }
 
       .amulet-cta {
@@ -332,26 +433,21 @@
         letter-spacing: 0.32em;
         text-transform: uppercase;
         color: var(--champagne); /* Jasny kolor tekstu */
-        background-image: linear-gradient(
-          125deg,
-          #541a2b 0%, /* Głębokie bordo */
-          #6d2b3f 100%  /* Nieco jaśniejsze bordo */
-        );
+        background: linear-gradient(125deg, #541a2b 0%, #6d2b3f 45%, #8a3d55 50%, #6d2b3f 55%, #541a2b 100%);
+        background-size: 200% auto;
+        background-position: 0% center;
         box-shadow: 0 18px 34px rgba(109, 43, 63, 0.28);
-        transition: transform 0.3s ease, box-shadow 0.3s ease,
-          border-color 0.3s ease;
+        transition: all 0.4s ease;
         text-decoration: none;
+        position: relative;
+        overflow: visible;
       }
 
       .amulet-cta:hover {
         transform: translateY(-4px);
-        box-shadow: 0 26px 48px rgba(109, 43, 63, 0.36);
-        border-color: rgba(200, 169, 106, 0.9);
-        background-image: linear-gradient(
-          125deg,
-          #6d2b3f 0%,
-          #541a2b 100%
-        );
+        box-shadow: 0 26px 48px rgba(212, 175, 55, 0.25);
+        border-color: rgba(200, 169, 106, 1);
+        background-position: 100% center;
         color: #fff;
       }
 
@@ -524,6 +620,13 @@
         color: #ffd700;
         box-shadow: 0 0 15px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(255, 215, 0, 0.1);
         text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+        transition: all 0.3s ease;
+      }
+
+      .feature-card:hover .feature-emoji {
+        transform: scale(1.1) rotate(10deg);
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.6), inset 0 0 15px rgba(255, 215, 0, 0.3);
+        background-color: rgba(255, 215, 0, 0.1);
       }
 
       .feature-title {
@@ -779,21 +882,12 @@
         object-fit: cover;
       }
 
-      .section-amulets .product-card img {
-        position: absolute;
-        inset: 0;
-        height: 100%;
-        filter: blur(1.5px) brightness(0.5);
-        transform: scale(1.1);
-        z-index: 0;
-        pointer-events: none;
-      }
-
       .section-amulets .product-card .product-body {
         position: relative;
         z-index: 1;
-        justify-content: space-between;
-        gap: 2.5rem;
+        justify-content: flex-start;
+        gap: 1.75rem;
+        padding-top: 0;
       }
 
       .section-amulets .amulet-footer {
@@ -904,17 +998,152 @@
         text-transform: uppercase;
         color: rgba(244, 232, 211, 0.6);
       }
+
+      /* --- MAGIC & LUXURY ADDITIONS --- */
+
+      /* 1. Particle / Magic Dust Styles */
+      .magic-particle {
+        position: absolute;
+        pointer-events: none;
+        background: radial-gradient(circle, #fff 0%, rgba(212, 175, 55, 0.8) 40%, transparent 80%);
+        border-radius: 50%;
+        opacity: 0;
+        z-index: 9999;
+      }
+      
+      /* 2. Subtle Shimmer Animation for Cards */
+      @keyframes soft-glow {
+        0%, 100% { box-shadow: 0 18px 40px rgba(10, 8, 6, 0.28); border-color: rgba(109, 43, 63, 0.26); }
+        50% { box-shadow: 0 25px 50px rgba(212, 175, 55, 0.15); border-color: rgba(212, 175, 55, 0.4); }
+      }
+      
+      /* Apply to product cards on hover */
+      .product-card:hover {
+        /* Existing transform kept via original class, but we enhance the shine here */
+        box-shadow: 0 30px 60px rgba(212, 175, 55, 0.12);
+      }
+
+      /* 3. Golden Text Shimmer Effect */
+      .text-shimmer {
+        background: linear-gradient(
+          to right,
+          var(--champagne) 20%,
+          #fff 40%,
+          #ffd700 60%,
+          var(--champagne) 80%
+        );
+        background-size: 200% auto;
+        color: #000;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shine 5s linear infinite;
+      }
+
+      @keyframes shine {
+        to {
+          background-position: 200% center;
+        }
+      }
+
+      /* 4. Floating Sparkles */
+      .floating-sparkle {
+        position: absolute;
+        color: var(--gold);
+        opacity: 0.7;
+        filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.6));
+        animation: float-sparkle 4s ease-in-out infinite;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      @keyframes float-sparkle {
+        0%, 100% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.4; }
+        50% { transform: translateY(-15px) scale(1.3) rotate(15deg); opacity: 1; }
+      }
+      
+      /* 5. Button Hover Magic */
+      .hero-cta, .amulet-cta {
+        position: relative;
+        overflow: visible; /* Allow particles to fly out */
+      }
+      
+      /* Inner glow on buttons */
+      .hero-cta::after, .amulet-cta::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 999px;
+        box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.4);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      .hero-cta:hover::after, .amulet-cta:hover::after {
+        opacity: 1;
+      }
+
     </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Magic Dust Effect on Buttons
+        const buttons = document.querySelectorAll('.hero-cta, .amulet-cta');
+        
+        buttons.forEach(btn => {
+          btn.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.5) return; // Limit particle density
+            createParticle(e.clientX, e.clientY);
+          });
+        });
+
+        function createParticle(x, y) {
+          const particle = document.createElement('div');
+          particle.classList.add('magic-particle');
+          document.body.appendChild(particle);
+
+          const size = Math.random() * 5 + 2;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+          particle.style.left = `${x}px`;
+          particle.style.top = `${y}px`;
+          
+          // Add random color variance (gold/white)
+          const isGold = Math.random() > 0.3;
+          particle.style.background = isGold 
+            ? 'radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(212,175,55,0.6) 100%)' 
+            : 'radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,230,230,0.6) 100%)';
+
+          const destinationX = (Math.random() - 0.5) * 60;
+          const destinationY = (Math.random() - 0.5) * 60 - 30; // Tendency to float up
+          const rotation = Math.random() * 360;
+
+          const animation = particle.animate([
+            { transform: `translate(-50%, -50%) scale(0.5) rotate(0deg)`, opacity: 1 },
+            { transform: `translate(calc(-50% + ${destinationX}px), calc(-50% + ${destinationY}px)) scale(0) rotate(${rotation}deg)`, opacity: 0 }
+          ], {
+            duration: 800 + Math.random() * 600,
+            easing: 'cubic-bezier(0, .9, .57, 1)',
+          });
+
+          animation.onfinish = () => particle.remove();
+        }
+      });
+    </script>
   </head>
   <body>
     <header class='hero' id='hero'>
+      <!-- Floating Sparkles -->
+      <svg class="floating-sparkle" style="top: 15%; left: 10%; width: 24px; animation-delay: 0s;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" /></svg>
+      <svg class="floating-sparkle" style="top: 25%; right: 15%; width: 18px; animation-delay: 1.5s;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" /></svg>
+      <svg class="floating-sparkle" style="bottom: 20%; left: 20%; width: 30px; animation-delay: 2.5s; opacity: 0.5;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" /></svg>
+
       <div class='hero-media'>
         <img src='/public/zdj1.jpg' alt='Amulet SimonaK w świetlistym otoczeniu' />
         <div class='hero-gradient'></div>
       </div>
       <div class='hero-content'>
         <h1 class='hero-title'>
-          <span class='hero-title-line'>CHCESZ W&nbsp;KOŃCU POCZUĆ SPOKÓJ, PEWNOŚĆ I&nbsp;LEKKOŚĆ W&nbsp;CODZIENNOŚCI?</span>
+          <span class='hero-title-line text-shimmer'>CHCESZ W&nbsp;KOŃCU POCZUĆ SPOKÓJ, PEWNOŚĆ I&nbsp;LEKKOŚĆ W&nbsp;CODZIENNOŚCI?</span>
         </h1>
         <a class='hero-cta' href='#amulets'>TEGO PRAGNĘ</a>
       </div>
@@ -928,199 +1157,180 @@
           </div>
           <div class='amulet-grid'>
           <article class='product-card amulet-card'>
-            <img src='/public/zdj1.jpg' alt='Amulet Inner Child' loading='lazy' />
             <div class='product-body'>
-              <h3 class='amulet-title'>czują, że brakuje im czułości do siebie</h3>
+              <div class='amulet-header-wrapper'>
+                <h3 class='amulet-title'>
+                  odczuwają brak czułości do samej siebie </h3>
+                </h3>
+                <div class='amulet-image-block'>
+                  <img src='/public/amulet.png' alt='Amulet' />
+                </div>
+              </div>
               <div class='amulet-footer'>
                 <p class='amulet-copy'>
-                  Inner Child – przypomina, że jesteś wystarczająca i zasługujesz na troskę, nawet gdy nie wszystko się układa.
+                  <span class='amulet-name-highlight'>Amulet Inner Child</span>
+                  Przypomina, że jesteś wystarczająca i zasługujesz na troskę, nawet gdy nie wszystko się układa.
                 </p>
-                <a
-                  class='amulet-cta'
-                  href='https://simkensy.com/pl/products/amulet-bogini-inner-child-776.html'
-                  target='_blank'
-                  rel='noopener'
-                >
-                  WYBIERAM
-                </a>
               </div>
             </div>
           </article>
           <article class='product-card amulet-card'>
-            <img src='/public/zdj1.jpg' alt='Amulet Guardian &amp; Mystic' loading='lazy' />
             <div class='product-body'>
-              <h3 class='amulet-title'>dają z siebie za dużo</h3>
+              <div class='amulet-header-wrapper'>
+                <h3 class='amulet-title'>ciągle dają innym za dużo z siebie</h3>
+                <div class='amulet-image-block'>
+                  <img src='/public/amulet.png' alt='Amulet' />
+                </div>
+              </div>
               <div class='amulet-footer'>
                 <p class='amulet-copy'>
-                  Guardian &amp; Mystic – pomaga postawić granice i ochronić energię, żebyś miała siłę dla siebie.
+                  <span class='amulet-name-highlight'>Amulet Guardian &amp; Mystic</span>
+                  Pomaga postawić granice i ochronić energię, żebyś miała siłę dla siebie.
                 </p>
-                <a
-                  class='amulet-cta'
-                  href='https://simkensy.com/pl/products/amulet-bogini-guardian-mystic-745.html'
-                  target='_blank'
-                  rel='noopener'
-                >
-                  WYBIERAM
-                </a>
               </div>
             </div>
           </article>
           <article class='product-card amulet-card'>
-            <img src='/public/zdj1.jpg' alt='Amulet Sensual &amp; Magnetic' loading='lazy' />
             <div class='product-body'>
-              <h3 class='amulet-title'>chcą poczuć swoją kobiecość i magnetyzm</h3>
+              <div class='amulet-header-wrapper'>
+                <h3 class='amulet-title'>chcą poczuć kobiecość i magnetyzm</h3>
+                <div class='amulet-image-block'>
+                  <img src='/public/amulet.png' alt='Amulet' />
+                </div>
+              </div>
               <div class='amulet-footer'>
                 <p class='amulet-copy'>
-                  Sensual &amp; Magnetic – wzmacnia energię pewności siebie, zmysłowości i wewnętrznej atrakcyjności.
+                  <span class='amulet-name-highlight'>Amulet Sensual &amp; Magnetic</span>
+                  Wzmacnia energię pewności siebie, zmysłowości i wewnętrznej atrakcyjności.
                 </p>
-                <a
-                  class='amulet-cta'
-                  href='https://simkensy.com/pl/products/amulet-bogini-sensual-magnetic-742.html'
-                  target='_blank'
-                  rel='noopener'
-                >
-                  WYBIERAM
-                </a>
               </div>
             </div>
           </article>
           <article class='product-card amulet-card'>
-            <img src='/public/zdj1.jpg' alt='Amulet Selflove' loading='lazy' />
             <div class='product-body'>
-              <h3 class='amulet-title'>chcą naprawdę pokochać siebie, bez warunków</h3>
+              <div class='amulet-header-wrapper'>
+                <h3 class='amulet-title'>chcą pokochać siebie, bez warunków</h3>
+                <div class='amulet-image-block'>
+                  <img src='/public/amulet.png' alt='Amulet' />
+                </div>
+              </div>
               <div class='amulet-footer'>
                 <p class='amulet-copy'>
-                  Selflove - pomaga Ci widzieć w sobie wartość niezależnie od opinii innych i codziennych potknięć.
+                  <span class='amulet-name-highlight'>Amulet Selflove</span>
+                  Pomaga Ci widzieć w sobie wartość niezależnie od opinii innych i codziennych potknięć.
                 </p>
-                <a
-                  class='amulet-cta'
-                  href='https://simkensy.com/pl/products/amulet-selflove-861.html'
-                  target='_blank'
-                  rel='noopener'
-                >
-                  WYBIERAM
-                </a>
               </div>
             </div>
           </article>
           <article class='product-card amulet-card'>
-            <img src='/public/zdj1.jpg' alt='Amulet Abundance &amp; Joy' loading='lazy' />
             <div class='product-body'>
-              <h3 class='amulet-title'>czują, że życie stało się zbyt ciężkie</h3>
+              <div class='amulet-header-wrapper'>
+                <h3 class='amulet-title'>
+                  czują, że życie stało się zbyt ciężkie
+                </h3>
+                <div class='amulet-image-block'>
+                  <img src='/public/amulet.png' alt='Amulet' />
+                </div>
+              </div>
               <div class='amulet-footer'>
                 <p class='amulet-copy'>
-                  Abundance &amp; Joy – przywołuje lekkość i radość, bez presji i bez pośpiechu.
+                  <span class='amulet-name-highlight'>Amulet Abundance &amp; Joy</span>
+                  Przywołuje lekkość i radość, bez presji i bez pośpiechu.
                 </p>
-                <a
-                  class='amulet-cta'
-                  href='https://simkensy.com/pl/products/amulet-bogini-abudance-joy-743.html'
-                  target='_blank'
-                  rel='noopener'
-                >
-                  WYBIERAM
-                </a>
               </div>
             </div>
           </article>
           <article class='product-card amulet-card'>
-            <img src='/public/zdj1.jpg' alt='Amulet Rozkwitanie' loading='lazy' />
             <div class='product-body'>
-              <h3 class='amulet-title'>są w procesie zmiany i nie wiedzą, co dalej</h3>
+              <div class='amulet-header-wrapper'>
+                <h3 class='amulet-title'>chcą zmiany<br />i nie wiedzą, co dalej</h3>
+                <div class='amulet-image-block'>
+                  <img src='/public/amulet.png' alt='Amulet' />
+                </div>
+              </div>
               <div class='amulet-footer'>
                 <p class='amulet-copy'>
-                  Rozkwitanie – wspiera zaufanie do procesu i przypomina, że nie musisz się spieszyć.
+                  <span class='amulet-name-highlight'>Amulet Rozkwitanie</span>
+                  Wspiera zaufanie do procesu i przypomina, że nie musisz się spieszyć.
                 </p>
-                <a
-                  class='amulet-cta'
-                  href='https://simkensy.com/pl/products/amulet-rozkwitanie-860.html'
-                  target='_blank'
-                  rel='noopener'
-                >
-                  WYBIERAM
-                </a>
               </div>
             </div>
           </article>
           <article class='product-card amulet-card'>
-            <img src='/public/zdj1.jpg' alt='Amulet Mądrość Przodkiń' loading='lazy' />
             <div class='product-body'>
-              <h3 class='amulet-title'>chcą poczuć siłę i wsparcie kobiet</h3>
+              <div class='amulet-header-wrapper'>
+                <h3 class='amulet-title'>chcą poczuć siłę i wsparcie kobiet</h3>
+                <div class='amulet-image-block'>
+                  <img src='/public/amulet.png' alt='Amulet' />
+                </div>
+              </div>
               <div class='amulet-footer'>
                 <p class='amulet-copy'>
-                  Mądrość Przodkiń – łączy Cię z energią pokoleń, które też miały odwagę żyć po swojemu.
+                  <span class='amulet-name-highlight'>Amulet Mądrość Przodkiń</span>
+                  Łączy Cię z energią pokoleń, które też miały odwagę żyć po swojemu.
                 </p>
-                <a
-                  class='amulet-cta'
-                  href='https://simkensy.com/pl/products/amulet-bogini-madrosc-przodkin-777.html'
-                  target='_blank'
-                  rel='noopener'
-                >
-                  WYBIERAM
-                </a>
               </div>
             </div>
           </article>
           <article class='product-card amulet-card'>
-            <img src='/public/zdj1.jpg' alt='Amulet Intuition &amp; Third Eye' loading='lazy' />
             <div class='product-body'>
-              <h3 class='amulet-title'>chcą bardziej ufać sobie</h3>
+              <div class='amulet-header-wrapper'>
+                <h3 class='amulet-title'>chcą bardziej ufać swojej intuicji</h3>
+                <div class='amulet-image-block'>
+                  <img src='/public/amulet.png' alt='Amulet' />
+                </div>
+              </div>
               <div class='amulet-footer'>
                 <p class='amulet-copy'>
-                  Intuition &amp; Third Eye – pomaga wrócić do intuicji i spokoju wewnętrznego głosu.
+                  <span class='amulet-name-highlight'>Amulet Intuition &amp; Third Eye</span>
+                  Pomaga wrócić do intuicji i spokoju wewnętrznego głosu.
                 </p>
-                <a
-                  class='amulet-cta'
-                  href='https://simkensy.com/pl/products/amulet-bogini-intuition-third-eye-744.html'
-                  target='_blank'
-                  rel='noopener'
-                >
-                  WYBIERAM
-                </a>
               </div>
             </div>
           </article>
           <article class='product-card amulet-card'>
-            <img src='/public/zdj1.jpg' alt='Amulet Old Money' loading='lazy' />
             <div class='product-body'>
-              <h3 class='amulet-title'>chcą czuć się pewnie w relacji z pieniędzmi</h3>
+              <div class='amulet-header-wrapper'>
+                <h3 class='amulet-title'>chcą spokojnej relacji<br />z pieniędzmi</h3>
+                <div class='amulet-image-block'>
+                  <img src='/public/amulet.png' alt='Amulet' />
+                </div>
+              </div>
               <div class='amulet-footer'>
                 <p class='amulet-copy'>
-                  Old Money – przypomina, że obfitość to Twój naturalny stan, nie coś, o co musisz walczyć.
+                  <span class='amulet-name-highlight'>Amulet Old Money</span>
+                  Przypomina, że obfitość to Twój naturalny stan, nie coś, o co musisz walczyć.
                 </p>
-                <a
-                  class='amulet-cta'
-                  href='https://simkensy.com/pl/products/amulet-old-money-pieniadze-863.html'
-                  target='_blank'
-                  rel='noopener'
-                >
-                  WYBIERAM
-                </a>
               </div>
             </div>
           </article>
           <article class='product-card amulet-card'>
-            <img src='/public/zdj1.jpg' alt='Amulet Aura' loading='lazy' />
             <div class='product-body'>
-              <h3 class='amulet-title'>chcą czuć się piękne i spokojne</h3>
+              <div class='amulet-header-wrapper'>
+                <h3 class='amulet-title'>chcą czuć się piękne i spokojne</h3>
+                <div class='amulet-image-block'>
+                  <img src='/public/amulet.png' alt='Amulet' />
+                </div>
+              </div>
               <div class='amulet-footer'>
                 <p class='amulet-copy'>
-                  Aura – wzmacnia poczucie harmonii i autentycznego piękna w codzienności.
+                  <span class='amulet-name-highlight'>Amulet Aura</span>
+                  Wzmacnia poczucie harmonii i autentycznego piękna w codzienności.
                 </p>
-                <a
-                  class='amulet-cta'
-                  href='https://simkensy.com/pl/products/amulet-aura-862.html'
-                  target='_blank'
-                  rel='noopener'
-                >
-                  WYBIERAM
-                </a>
               </div>
             </div>
           </article>
           </div>
+          <div class='section-cta'>
+            <a class='hero-cta' href='#choose'>WYBIERZ SWÓJ AMULET</a>
+          </div>
         </div>
       </section>
       <section class='section section-crafted' id='crafted'>
+        <!-- Section Sparkles -->
+        <svg class="floating-sparkle" style="top: 10%; right: 10%; width: 24px; animation-delay: 1s;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" /></svg>
+        <svg class="floating-sparkle" style="bottom: 15%; left: 5%; width: 20px; animation-delay: 3s;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" /></svg>
+
         <div class='section-shell'>
           <div class='section-intro'>
             <h2 class='section-heading'>NIE MA DWÓCH TAKICH SAMYCH</h2>
@@ -1310,126 +1520,156 @@
             </p>
           </div>
           <div class='product-grid'>
-          <a
-            class='product-card'
-            href='https://simkensy.com/pl/products/amulet-bogini-inner-child-776.html'
-            target='_blank'
-            rel='noopener'
-          >
+          <article class='product-card' id='product-inner-child'>
             <img src='/public/zdj1.jpg' alt='Amulet Inner Child' loading='lazy' />
             <div class='product-body'>
               <h3 class='product-title'>Inner Child</h3>
               <p class='price-tag'>Cena: od 369 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-inner-child-776.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
             </div>
-          </a>
-          <a
-            class='product-card'
-            href='https://simkensy.com/pl/products/amulet-bogini-guardian-mystic-745.html'
-            target='_blank'
-            rel='noopener'
-          >
+          </article>
+          <article class='product-card' id='product-guardian-mystic'>
             <img src='/public/zdj1.jpg' alt='Amulet Guardian &amp; Mystic' loading='lazy' />
             <div class='product-body'>
               <h3 class='product-title'>Guardian &amp; Mystic</h3>
               <p class='price-tag'>Cena: od 379 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-guardian-mystic-745.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
             </div>
-          </a>
-          <a
-            class='product-card'
-            href='https://simkensy.com/pl/products/amulet-bogini-sensual-magnetic-742.html'
-            target='_blank'
-            rel='noopener'
-          >
+          </article>
+          <article class='product-card' id='product-sensual-magnetic'>
             <img src='/public/zdj1.jpg' alt='Amulet Sensual &amp; Magnetic' loading='lazy' />
             <div class='product-body'>
               <h3 class='product-title'>Sensual &amp; Magnetic</h3>
               <p class='price-tag'>Cena: od 379 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-sensual-magnetic-742.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
             </div>
-          </a>
-          <a
-            class='product-card'
-            href='https://simkensy.com/pl/products/amulet-selflove-861.html'
-            target='_blank'
-            rel='noopener'
-          >
+          </article>
+          <article class='product-card' id='product-selflove'>
             <img src='/public/zdj1.jpg' alt='Amulet Selflove' loading='lazy' />
             <div class='product-body'>
               <h3 class='product-title'>Selflove</h3>
               <p class='price-tag'>Cena: od 369 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-selflove-861.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
             </div>
-          </a>
-          <a
-            class='product-card'
-            href='https://simkensy.com/pl/products/amulet-bogini-abudance-joy-743.html'
-            target='_blank'
-            rel='noopener'
-          >
+          </article>
+          <article class='product-card' id='product-abundance-joy'>
             <img src='/public/zdj1.jpg' alt='Amulet Abundance &amp; Joy' loading='lazy' />
             <div class='product-body'>
               <h3 class='product-title'>Abundance &amp; Joy</h3>
               <p class='price-tag'>Cena: od 379 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-abudance-joy-743.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
             </div>
-          </a>
-          <a
-            class='product-card'
-            href='https://simkensy.com/pl/products/amulet-rozkwitanie-860.html'
-            target='_blank'
-            rel='noopener'
-          >
+          </article>
+          <article class='product-card' id='product-rozkwitanie'>
             <img src='/public/zdj1.jpg' alt='Amulet Rozkwitanie' loading='lazy' />
             <div class='product-body'>
               <h3 class='product-title'>Rozkwitanie</h3>
               <p class='price-tag'>Cena: od 389 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-rozkwitanie-860.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
             </div>
-          </a>
-          <a
-            class='product-card'
-            href='https://simkensy.com/pl/products/amulet-bogini-madrosc-przodkin-777.html'
-            target='_blank'
-            rel='noopener'
-          >
+          </article>
+          <article class='product-card' id='product-madrosc-przodkin'>
             <img src='/public/zdj1.jpg' alt='Amulet Mądrość Przodkiń' loading='lazy' />
             <div class='product-body'>
               <h3 class='product-title'>Mądrość Przodkiń</h3>
               <p class='price-tag'>Cena: od 409 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-madrosc-przodkin-777.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
             </div>
-          </a>
-          <a
-            class='product-card'
-            href='https://simkensy.com/pl/products/amulet-bogini-intuition-third-eye-744.html'
-            target='_blank'
-            rel='noopener'
-          >
+          </article>
+          <article class='product-card' id='product-intuition-third-eye'>
             <img src='/public/zdj1.jpg' alt='Amulet Intuition &amp; Third Eye' loading='lazy' />
             <div class='product-body'>
               <h3 class='product-title'>Intuition &amp; Third Eye</h3>
               <p class='price-tag'>Cena: od 379 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-intuition-third-eye-744.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
             </div>
-          </a>
-          <a
-            class='product-card'
-            href='https://simkensy.com/pl/products/amulet-old-money-pieniadze-863.html'
-            target='_blank'
-            rel='noopener'
-          >
+          </article>
+          <article class='product-card' id='product-old-money'>
             <img src='/public/zdj1.jpg' alt='Amulet Old Money' loading='lazy' />
             <div class='product-body'>
               <h3 class='product-title'>Old Money</h3>
               <p class='price-tag'>Cena: od 419 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-old-money-pieniadze-863.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
             </div>
-          </a>
-          <a
-            class='product-card'
-            href='https://simkensy.com/pl/products/amulet-aura-862.html'
-            target='_blank'
-            rel='noopener'
-          >
+          </article>
+          <article class='product-card' id='product-aura'>
             <img src='/public/zdj1.jpg' alt='Amulet Aura' loading='lazy' />
             <div class='product-body'>
               <h3 class='product-title'>Aura</h3>
               <p class='price-tag'>Cena: od 379 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-aura-862.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
             </div>
-          </a>
+          </article>
         </div>
       </section>
     </main>
