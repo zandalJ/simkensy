@@ -543,88 +543,134 @@
         position: relative;
         background: radial-gradient(circle at 20% 20%, rgba(109, 43, 63, 0.15), transparent 50%),
           rgba(26, 22, 20, 0.94);
-      }
-
-      .section-process::before {
-        content: '';
-        position: absolute;
-        inset: 2rem;
-        border-radius: 2.5rem;
-        border: 1px dashed rgba(200, 169, 106, 0.25);
-        opacity: 0.4;
-        pointer-events: none;
-      }
-
-      .step-grid {
-        display: grid;
-        gap: 1.75rem;
-        width: 100%;
-      }
-
-      @media (min-width: 768px) {
-        .step-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
-
-      .step-card {
-        position: relative;
-        display: flex;
-        flex-direction: column; /* Zmiana na kolumnę dla wyśrodkowania */
-        align-items: center; /* Wyśrodkowanie */
-        text-align: center; /* Wyśrodkowanie */
-        gap: 1.5rem;
-        padding: 2.5rem 2rem;
-        border-radius: 1.8rem;
-        border: 1px solid rgba(109, 43, 63, 0.35);
-        background: linear-gradient(145deg, rgba(26, 22, 20, 0.9), rgba(27, 17, 19, 0.7));
-        backdrop-filter: blur(24px);
-        box-shadow: 0 25px 50px rgba(10, 8, 6, 0.32);
         overflow: hidden;
       }
 
-      .step-card::after {
+      /* Process Timeline Styles */
+      .process-timeline {
+        position: relative;
+        max-width: 900px;
+        margin: 4rem auto 0;
+        padding: 1rem 0;
+      }
+
+      .process-timeline::before {
         content: '';
         position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        border: 1px solid rgba(200, 169, 106, 0.12);
-        opacity: 0;
-        transition: opacity 0.3s ease;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        width: 1px;
+        background: linear-gradient(to bottom, 
+          rgba(212, 175, 55, 0), 
+          rgba(212, 175, 55, 0.4) 15%, 
+          rgba(212, 175, 55, 0.4) 85%, 
+          rgba(212, 175, 55, 0)
+        );
       }
 
-      .step-card:hover::after {
-        opacity: 1;
+      .timeline-step {
+        position: relative;
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 5rem;
       }
 
-      .step-number {
+      .timeline-step:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline-marker {
+        position: relative;
+        z-index: 2;
         flex-shrink: 0;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 999px;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #1a1614;
+        border: 1px solid rgba(212, 175, 55, 0.6);
+        color: var(--gold);
         font-family: 'Playfair Display', serif;
-        font-size: 1.4rem;
-        color: rgba(200, 169, 106, 0.9);
-        border: 1px solid rgba(200, 169, 106, 0.4);
-        background-color: rgba(109, 43, 63, 0.18);
+        font-size: 1.25rem;
+        box-shadow: 0 0 0 8px rgba(26, 22, 20, 1); 
       }
 
-      .step-body h3 {
+      .timeline-content {
+        flex: 1;
+        padding-top: 0.25rem;
+      }
+
+      .timeline-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        color: var(--champagne);
+        margin-bottom: 1rem;
+        line-height: 1.3;
+        letter-spacing: 0.02em;
+      }
+
+      .timeline-title strong {
+        display: block;
+        color: var(--gold);
+        font-size: 0.7em;
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 0.95rem;
-        letter-spacing: 0.28em;
+        letter-spacing: 0.2em;
         text-transform: uppercase;
-        color: rgba(244, 232, 211, 0.82);
         margin-bottom: 0.5rem;
+        opacity: 0.9;
       }
 
-      .step-body p {
-        font-size: 1.05rem; /* Zwiększone z 0.96rem */
-        line-height: 1.75;
+      .timeline-desc {
+        font-size: 1.05rem;
+        line-height: 1.8;
         color: var(--champagne-dim);
+      }
+
+      @media (min-width: 768px) {
+        .process-timeline::before {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .timeline-step {
+          /* Domyślnie parzyste (prawa strona) - wyrównanie do końca */
+          justify-content: flex-end;
+          gap: 0;
+        }
+        
+        .timeline-step:nth-child(odd) {
+          /* Nieparzyste (lewa strona) - wyrównanie do początku */
+          justify-content: flex-start;
+          flex-direction: row; /* Reset kierunku */
+        }
+        
+        .timeline-marker {
+          position: absolute;
+          left: 50%;
+          top: 0; /* Przyklej do góry sekcji kroku */
+          transform: translateX(-50%);
+          width: 56px;
+          height: 56px;
+          font-size: 1.5rem;
+        }
+        
+        .timeline-content {
+          width: 50%;
+          flex: none;
+        }
+        
+        .timeline-step:nth-child(odd) .timeline-content {
+          text-align: right;
+          padding-right: 4.5rem; /* Miejsce na marker */
+        }
+        
+        .timeline-step:nth-child(even) .timeline-content {
+          text-align: left;
+          padding-left: 4.5rem; /* Miejsce na marker */
+        }
       }
 
       .section-testimonials .section-subheading {
@@ -1122,59 +1168,85 @@
           <div class='section-intro'>
             <h2 class='section-heading'>JAK DZIAŁA TWÓJ AMULET?</h2>
             <p class='section-subheading'>
-              Każdy amulet ma znaczenie, ale nabiera mocy dopiero wtedy, gdy połączysz go ze swoją intencją. Od tej chwili staje się Twoim osobistym symbolem - przypomnieniem o tym, kim chcesz być, jak się czuć i jaką moc masz w sobie.
+              To proces, w którym biżuteria zmienia się w Twój osobisty symbol mocy. Zobacz, jak to się dzieje.
             </p>
           </div>
-          <div class='step-grid'>
-          <div class='step-card'>
-            <span class='step-number'>①</span>
-            <div class='step-body'>
-              <h3>Wybierasz ten, który Cię przyciąga</h3>
-              <p>
-                Nie analizujesz — po prostu czujesz, który wzór „woła” właśnie Ciebie. To ten moment, w którym zaczyna się proces.
-              </p>
+          
+          <div class='process-timeline'>
+            <!-- Step 1 -->
+            <div class='timeline-step'>
+              <div class='timeline-marker'>1</div>
+              <div class='timeline-content'>
+                <h3 class='timeline-title'>
+                  <strong>Krok Pierwszy</strong>
+                  Wybierasz sercem
+                </h3>
+                <p class='timeline-desc'>
+                  Nie analizujesz. Przeglądasz amulety i nagle jeden z nich Cię "woła". To ten moment, w którym zaczyna się Twoja intencja. Słuchasz swojej intuicji — ona wie najlepiej, czego teraz potrzebujesz.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class='timeline-step'>
+              <div class='timeline-marker'>2</div>
+              <div class='timeline-content'>
+                <h3 class='timeline-title'>
+                  <strong>Tworzenie</strong>
+                  Przygotowuję Twój amulet
+                </h3>
+                <p class='timeline-desc'>
+                  Kiedy składasz zamówienie, siadam do pracy. Każdy amulet tworzę ręcznie, łącząc wyjątkowe elementy: kwiaty, piasek, muszle. To czas, kiedy materia łączy się z energią Twojego wyboru.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class='timeline-step'>
+              <div class='timeline-marker'>3</div>
+              <div class='timeline-content'>
+                <h3 class='timeline-title'>
+                  <strong>Przesyłka</strong>
+                  Odbierasz coś więcej niż paczkę
+                </h3>
+                <p class='timeline-desc'>
+                  W środku znajdziesz nie tylko biżuterię, ale też instrukcję prostego rytuału założenia. To klucz, który pomoże Ci połączyć się z energią amuletu i "zaprogramować" go na Twoją intencję.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class='timeline-step'>
+              <div class='timeline-marker'>4</div>
+              <div class='timeline-content'>
+                <h3 class='timeline-title'>
+                  <strong>Rytuał</strong>
+                  Zakładasz go po raz pierwszy
+                </h3>
+                <p class='timeline-desc'>
+                  Ten gest to symboliczny moment wyboru siebie. Kiedy zapinasz łańcuszek, wysyłasz sygnał do swojej podświadomości: "Jestem dla siebie ważna. To jest mój czas".
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class='timeline-step'>
+              <div class='timeline-marker'>5</div>
+              <div class='timeline-content'>
+                <h3 class='timeline-title'>
+                  <strong>Codzienność</strong>
+                  Staje się Twoją kotwicą
+                </h3>
+                <p class='timeline-desc'>
+                  Ilekroć na niego spojrzysz lub go dotkniesz w ciągu dnia, przypominasz sobie o swojej sile, spokoju i intencji. To Twój namacalny punkt oparcia w każdej sytuacji.
+                </p>
+              </div>
             </div>
           </div>
-          <div class='step-card'>
-            <span class='step-number'>②</span>
-            <div class='step-body'>
-              <h3>Składasz zamówienie i przygotowuję Twój amulet</h3>
-              <p>
-                Każdy tworzony jest z wyjątkowych elementów: kwiatów, piasku, muszli czy przedmiotów, które mają znaczenie.
-              </p>
-            </div>
-          </div>
-          <div class='step-card'>
-            <span class='step-number'>③</span>
-            <div class='step-body'>
-              <h3>Otrzymujesz paczkę z rytuałem założenia</h3>
-              <p>
-                W środku znajdziesz prostą praktykę, która pomoże Ci połączyć się z energią swojego amuletu i intencji, z którą go nosisz.
-              </p>
-            </div>
-          </div>
-          <div class='step-card'>
-            <span class='step-number'>④</span>
-            <div class='step-body'>
-              <h3>Zakładasz go po raz pierwszy — to Twój moment</h3>
-              <p>
-                Ten gest to nie przypadek. To symboliczny moment wyboru siebie — od teraz towarzyszy Ci w codzienności.
-              </p>
-            </div>
-          </div>
-          <div class='step-card'>
-            <span class='step-number'>⑤</span>
-            <div class='step-body'>
-              <h3>Amulet staje się Twoją kotwicą</h3>
-              <p>
-                Pomaga Ci wracać do spokoju, pewności i zaufania, ilekroć zaczynasz o tym zapominać. To nie magia — to Twój nowy, namacalny punkt odniesienia.
-              </p>
-            </div>
-          </div>
-          </div>
+
           <div class='section-cta'>
             <a class='hero-cta' href='#choose'>
-              Wybierz swój amulet
+              Rozpocznij ten proces
             </a>
           </div>
         </div>
@@ -1201,7 +1273,7 @@
       <section class='section section-testimonials' id='opinie'>
         <div class='section-shell'>
           <div class='section-intro'>
-            <p class='section-eyebrow'>Głosy kobiet</p>
+            <p class='section-eyebrow'>Kobiety SIMKENSY</p>
             <h2 class='section-heading'>OPINIE</h2>
             <p class='section-subheading'>
               Historie kobiet, które wybrały swoje amulety i&nbsp;odkryły w&nbsp;nich codzienne źródło spokoju i&nbsp;pewności.
