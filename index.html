@@ -322,17 +322,17 @@
         gap: 0.5rem;
         margin-top: 1.5rem; /* Większy odstęp */
         border-radius: 999px;
-        border: 1px solid rgba(109, 43, 63, 0.68);
+        border: 1px solid rgba(200, 169, 106, 0.6);
         padding: 1rem 2.4rem;
         font-family: 'Space Grotesk', sans-serif;
         font-size: 1.1rem;
         letter-spacing: 0.32em;
         text-transform: uppercase;
-        color: rgb(244, 232, 211);
+        color: var(--champagne); /* Jasny kolor tekstu */
         background-image: linear-gradient(
           125deg,
-          rgba(109, 43, 63, 0.95) 0%,
-          rgba(200, 169, 106, 0.48) 100%
+          #541a2b 0%, /* Głębokie bordo */
+          #6d2b3f 100%  /* Nieco jaśniejsze bordo */
         );
         box-shadow: 0 18px 34px rgba(109, 43, 63, 0.28);
         transition: transform 0.3s ease, box-shadow 0.3s ease,
@@ -343,7 +343,13 @@
       .amulet-cta:hover {
         transform: translateY(-4px);
         box-shadow: 0 26px 48px rgba(109, 43, 63, 0.36);
-        border-color: rgba(200, 169, 106, 0.72);
+        border-color: rgba(200, 169, 106, 0.9);
+        background-image: linear-gradient(
+          125deg,
+          #6d2b3f 0%,
+          #541a2b 100%
+        );
+        color: #fff;
       }
 
       .section-energy {
@@ -1168,7 +1174,7 @@
           </div>
           <div class='section-cta'>
             <a class='hero-cta' href='#choose'>
-              💫 Wybierz swój amulet
+              Wybierz swój amulet
             </a>
           </div>
         </div>
