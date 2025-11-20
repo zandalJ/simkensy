@@ -300,46 +300,9 @@
         height: 0.95rem;
       }
 
-      .amulet-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 3.25rem;
-        height: 3.25rem;
-        border-radius: 999px;
-        border: 1px solid rgba(109, 43, 63, 0.4);
-        background-image: linear-gradient(
-          135deg,
-          rgba(109, 43, 63, 0.35) 0%,
-          rgba(200, 169, 106, 0.2) 100%
-        );
-        box-shadow: 0 14px 30px rgba(10, 8, 6, 0.35);
-        color: rgba(244, 232, 211, 0.95);
-      }
-
-      .amulet-icon svg {
-        width: 1.6rem;
-        height: 1.6rem;
-        stroke: currentColor;
-      }
-
-      .amulet-intro {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 0.95rem; /* Zwiększone z 0.85rem */
-        text-transform: uppercase;
-        letter-spacing: 0.25em;
-        color: #e8dcc5; /* Jaśniejszy kolor dla lepszej widoczności */
-        font-weight: 500;
-        margin-bottom: 0.25rem;
-        background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.15), transparent);
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        width: 100%;
-      }
-
       .amulet-title {
         font-family: 'Playfair Display', serif;
-        font-size: 1.75rem;
+        font-size: calc(1.75rem - 3px);
         letter-spacing: 0.18em;
         text-transform: uppercase;
         color: var(--champagne);
@@ -824,19 +787,14 @@
       <section id='amulets' class='section section-amulets'>
         <div class='section-shell'>
           <div class='section-intro'>
-            <p class='section-eyebrow'>Twoja codzienna aura</p>
-            <h2 class='section-heading'>AMULETY SIMKENSY POWSTAŁY DLA KOBIET TAKICH JAK TY, które</h2>
+            <p class='section-eyebrow'>Amulety SIMKENSY</p>
+            <h2 class='section-heading'>POWSTAŁY DLA KOBIET TAKICH JAK TY, które:</h2>
           </div>
           <div class='amulet-grid'>
           <article class='product-card amulet-card'>
             <img src='/public/zdj1.jpg' alt='Amulet Inner Child' loading='lazy' />
             <div class='product-body'>
-              <span class='amulet-icon' aria-hidden='true'>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'>
-                <path d='M12 19s-6-3.3-6-7.6c0-2.3 1.8-4.1 3.9-4.1 1.3 0 2.5.7 3.1 1.9.6-1.2 1.8-1.9 3.1-1.9 2.1 0 3.9 1.8 3.9 4.1 0 4.3-6 7.6-6 7.6z' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/>
-                </svg>
-            </span>
-              <p class='amulet-intro'>czują, że brakuje im czułości do siebie</p>
+              <h3 class='amulet-title'>czują, że brakuje im czułości do siebie</h3>
               <p class='amulet-copy'>
                 Inner Child – przypomina, że jesteś wystarczająca i zasługujesz na troskę, nawet gdy nie wszystko się układa.
               </p>
@@ -853,14 +811,7 @@
           <article class='product-card amulet-card'>
             <img src='/public/zdj1.jpg' alt='Amulet Guardian &amp; Mystic' loading='lazy' />
             <div class='product-body'>
-              <span class='amulet-icon' aria-hidden='true'>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'>
-                <path d='M12 4.5l6 2.2v4.8c0 4.2-2.7 8-6 9.3-3.3-1.3-6-5.1-6-9.3V6.7z' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/>
-                <path d='M10.5 11.5l1.5 1.6 1.5-1.6' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/>
-                </svg>
-            </span>
-              <p class='amulet-intro'>dają z siebie za dużo</p>
-              <h3 class='amulet-title'>Guardian &amp; Mystic</h3>
+              <h3 class='amulet-title'>dają z siebie za dużo</h3>
               <p class='amulet-copy'>
                 Guardian &amp; Mystic – pomaga postawić granice i ochronić energię, żebyś miała siłę dla siebie.
               </p>
@@ -877,14 +828,7 @@
           <article class='product-card amulet-card'>
             <img src='/public/zdj1.jpg' alt='Amulet Sensual &amp; Magnetic' loading='lazy' />
             <div class='product-body'>
-              <span class='amulet-icon' aria-hidden='true'>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'>
-                <path d='M4.5 12s2.5-3 7.5-3 7.5 3 7.5 3-2.5 3-7.5 3-7.5-3-7.5-3z' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/>
-                <path d='M5.2 12.1c1 .7 3 1.7 6.8 1.7s5.8-1 6.8-1.7' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/>
-                </svg>
-            </span>
-              <p class='amulet-intro'>chcą poczuć swoją kobiecość i magnetyzm</p>
-              <h3 class='amulet-title'>Sensual &amp; Magnetic</h3>
+              <h3 class='amulet-title'>chcą poczuć swoją kobiecość i magnetyzm</h3>
               <p class='amulet-copy'>
                 Sensual &amp; Magnetic – wzmacnia energię pewności siebie, zmysłowości i wewnętrznej atrakcyjności.
               </p>
@@ -901,14 +845,7 @@
           <article class='product-card amulet-card'>
             <img src='/public/zdj1.jpg' alt='Amulet Selflove' loading='lazy' />
             <div class='product-body'>
-              <span class='amulet-icon' aria-hidden='true'>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'>
-                <path d='M12 9.2c-.9-1.2-2.1-1.9-3.4-1.9-2 0-3.6 1.8-3.6 3.9 0 4.1 7 7.1 7 7.1s7-3 7-7.1c0-2.1-1.6-3.9-3.6-3.9-1.3 0-2.5.7-3.4 1.9z' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/>
-                <path d='M4.5 14.2c1.4 2.1 3.8 3.5 7.5 3.5s6.1-1.4 7.5-3.5' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/>
-                </svg>
-            </span>
-              <p class='amulet-intro'>chcą naprawdę pokochać siebie, bez warunków</p>
-              <h3 class='amulet-title'>Selflove</h3>
+              <h3 class='amulet-title'>chcą naprawdę pokochać siebie, bez warunków</h3>
               <p class='amulet-copy'>
                 Selflove - pomaga Ci widzieć w sobie wartość niezależnie od opinii innych i codziennych potknięć.
               </p>
@@ -925,14 +862,7 @@
           <article class='product-card amulet-card'>
             <img src='/public/zdj1.jpg' alt='Amulet Abundance &amp; Joy' loading='lazy' />
             <div class='product-body'>
-              <span class='amulet-icon' aria-hidden='true'>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'>
-                <circle cx='12' cy='12' r='3.3' stroke-width='1.2'/>
-                <path d='M12 4v2.3M12 17.7V20M5.3 12H4M20 12h-1.3M17.2 6.8l-1.6 1.2M8.4 15.9 6.8 17.2M6.8 6.8l1.6 1.2m7.2 7.9 1.6 1.3' stroke-width='1.2' stroke-linecap='round'/>
-                </svg>
-            </span>
-              <p class='amulet-intro'>czują, że życie stało się zbyt ciężkie</p>
-              <h3 class='amulet-title'>Abundance &amp; Joy</h3>
+              <h3 class='amulet-title'>czują, że życie stało się zbyt ciężkie</h3>
               <p class='amulet-copy'>
                 Abundance &amp; Joy – przywołuje lekkość i radość, bez presji i bez pośpiechu.
               </p>
@@ -949,14 +879,7 @@
           <article class='product-card amulet-card'>
             <img src='/public/zdj1.jpg' alt='Amulet Rozkwitanie' loading='lazy' />
             <div class='product-body'>
-              <span class='amulet-icon' aria-hidden='true'>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'>
-                <path d='M12 5.5c0 2.8-1.6 5.3-4.1 6.5 0 0 .4 5.5 4.1 6.5 3.7-1 4.1-6.5 4.1-6.5C13.6 10.8 12 8.3 12 5.5z' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/>
-                <path d='M12 12v6.2M9.2 16.1c1 .4 1.8 1.4 2.8 3 1-1.6 1.8-2.6 2.8-3' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/>
-                </svg>
-            </span>
-              <p class='amulet-intro'>są w procesie zmiany i nie wiedzą, co dalej</p>
-              <h3 class='amulet-title'>Rozkwitanie</h3>
+              <h3 class='amulet-title'>są w procesie zmiany i nie wiedzą, co dalej</h3>
               <p class='amulet-copy'>
                 Rozkwitanie – wspiera zaufanie do procesu i przypomina, że nie musisz się spieszyć.
               </p>
@@ -973,14 +896,7 @@
           <article class='product-card amulet-card'>
             <img src='/public/zdj1.jpg' alt='Amulet Mądrość Przodkiń' loading='lazy' />
             <div class='product-body'>
-              <span class='amulet-icon' aria-hidden='true'>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'>
-                <path d='M6 16c4-6 9-7 12-9-.8 4.8-2.8 9-7 11-1.5.7-3 .9-4.5.9' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/>
-                <path d='M9.5 10.8c1.2 1.1 2.3 2.4 3.2 4.1M13 9c.9.8 1.6 1.8 2.1 3' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round'/>
-                </svg>
-            </span>
-              <p class='amulet-intro'>chcą poczuć siłę i wsparcie kobiet</p>
-              <h3 class='amulet-title'>Mądrość Przodkiń</h3>
+              <h3 class='amulet-title'>chcą poczuć siłę i wsparcie kobiet</h3>
               <p class='amulet-copy'>
                 Mądrość Przodkiń – łączy Cię z energią pokoleń, które też miały odwagę żyć po swojemu.
               </p>
@@ -997,15 +913,7 @@
           <article class='product-card amulet-card'>
             <img src='/public/zdj1.jpg' alt='Amulet Intuition &amp; Third Eye' loading='lazy' />
             <div class='product-body'>
-              <span class='amulet-icon' aria-hidden='true'>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'>
-                <path d='M3.8 12s3.4-5 8.2-5 8.2 5 8.2 5-3.4 5-8.2 5-8.2-5-8.2-5z' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/>
-                <circle cx='12' cy='12' r='2.2' stroke-width='1.3'/>
-                <circle cx='12' cy='12' r='.7' fill='currentColor'/>
-                </svg>
-            </span>
-              <p class='amulet-intro'>chcą bardziej ufać sobie</p>
-              <h3 class='amulet-title'>Intuition &amp; Third Eye</h3>
+              <h3 class='amulet-title'>chcą bardziej ufać sobie</h3>
               <p class='amulet-copy'>
                 Intuition &amp; Third Eye – pomaga wrócić do intuicji i spokoju wewnętrznego głosu.
               </p>
@@ -1022,15 +930,7 @@
           <article class='product-card amulet-card'>
             <img src='/public/zdj1.jpg' alt='Amulet Old Money' loading='lazy' />
             <div class='product-body'>
-              <span class='amulet-icon' aria-hidden='true'>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'>
-                <circle cx='12' cy='12' r='5.2' stroke-width='1.3'/>
-                <path d='M12 8.5v7M10 10.2c.7-.7 1.4-1 2.1-1 1.1 0 1.9.6 1.9 1.5s-.7 1.4-1.9 1.4' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round'/>
-                <path d='M14 14.2c-.6.7-1.4 1-2.3 1-1.1 0-1.9-.5-2.3-1' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round'/>
-                </svg>
-            </span>
-              <p class='amulet-intro'>chcą czuć się pewnie w relacji z pieniędzmi</p>
-              <h3 class='amulet-title'>Old Money</h3>
+              <h3 class='amulet-title'>chcą czuć się pewnie w relacji z pieniędzmi</h3>
               <p class='amulet-copy'>
                 Old Money – przypomina, że obfitość to Twój naturalny stan, nie coś, o co musisz walczyć.
               </p>
@@ -1047,14 +947,7 @@
           <article class='product-card amulet-card'>
             <img src='/public/zdj1.jpg' alt='Amulet Aura' loading='lazy' />
             <div class='product-body'>
-              <span class='amulet-icon' aria-hidden='true'>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'>
-                <path d='M4.5 14.5c1.2-.9 2.5-.9 3.7 0s2.5.9 3.7 0 2.5-.9 3.7 0 2.5.9 3.7 0' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/>
-                <path d='M4.5 11.5c1.2-.9 2.5-.9 3.7 0s2.5.9 3.7 0 2.5-.9 3.7 0 2.5.9 3.7 0 2.5.9 3.7 0' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/>
-                </svg>
-            </span>
-              <p class='amulet-intro'>chcą czuć się piękne i spokojne</p>
-              <h3 class='amulet-title'>Aura</h3>
+              <h3 class='amulet-title'>chcą czuć się piękne i spokojne</h3>
               <p class='amulet-copy'>
                 Aura – wzmacnia poczucie harmonii i autentycznego piękna w codzienności.
               </p>
