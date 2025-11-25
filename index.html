@@ -790,21 +790,25 @@
         margin: 0 auto;
       }
 
+      .section-testimonials .section-intro {
+        margin-bottom: 0;
+      }
+
       .testimonial-grid {
-        display: grid;
-        gap: 1.5rem;
-        margin-top: 3rem;
+        column-count: 1;
+        column-gap: 1.5rem;
+        margin-top: 0;
       }
 
       @media (min-width: 640px) {
         .testimonial-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          column-count: 2;
         }
       }
 
       @media (min-width: 1024px) {
         .testimonial-grid {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
+          column-count: 3;
         }
       }
 
@@ -820,6 +824,25 @@
         box-shadow: 0 18px 42px rgba(10, 8, 6, 0.3);
         text-align: center; /* Wyśrodkowanie opinii */
         align-items: center;
+      }
+
+      .testimonial-image-card {
+        break-inside: avoid;
+        margin-bottom: 1.5rem;
+        border-radius: 1.5rem;
+        transition: transform 0.3s ease;
+      }
+
+      .testimonial-image-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .testimonial-image-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 1.5rem;
+        box-shadow: 0 18px 42px rgba(10, 8, 6, 0.3);
       }
 
       .testimonial-quote {
@@ -1468,25 +1491,46 @@
             </p>
           </div>
           <div class='testimonial-grid'>
-          <article class='testimonial-card'>
-            <p class='testimonial-quote'>
-              „Każdego poranka zakładam Inner Child i&nbsp;wracam do&nbsp;miękkości. To&nbsp;mała biżuteria, a&nbsp;zmienia sposób, w&nbsp;jaki traktuję siebie.”
-            </p>
-            <p class='testimonial-author'>Magda, Warszawa</p>
-          </article>
-          <article class='testimonial-card'>
-            <p class='testimonial-quote'>
-              „Guardian &amp; Mystic to&nbsp;mój talizman granic. Noszę go na&nbsp;spotkaniach biznesowych i&nbsp;czuję, że mam wokół siebie ochronną bańkę.”
-            </p>
-            <p class='testimonial-author'>Iza, Berlin</p>
-          </article>
-          <article class='testimonial-card'>
-            <p class='testimonial-quote'>
-              „Rozkwitanie przypomina mi, że mogę iść swoim tempem. Delikatny rytuał założenia stał się moją codzienną medytacją.”
-            </p>
-            <p class='testimonial-author'>Ola, Gdańsk</p>
-          </article>
-        </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20250829-183634_WhatsApp.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20250911-223622_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20250924-155108_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251016-101746_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251028-233418_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251029-175324_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251031-093134_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251105-194946_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251107-140127_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251109-140832_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251113-080246_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251119-152410_Messenger.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251122-211825_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+          </div>
       </section>
       <section class='section section-choose' id='choose'>
         <div class='section-shell'>
