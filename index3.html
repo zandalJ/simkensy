@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Amulety Simkensy wspierają Twoją energię, pewność i lekkość w codzienności."
+    />
+    <title>SIMKENSY</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23110B0A'/%3E%3Cpath d='M32 14l3.9 7.9 8.7 1.3-6.3 6.2 1.5 8.7L32 34.8l-7.8 4.3 1.5-8.7-6.3-6.2 8.7-1.3L32 14z' fill='%23C8A96A'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23F2E6D6' opacity='0.82'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/tailwind.css" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1305940894064078');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1305940894064078&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+      :root {
+        --claret: #2e0a0a;
+        --claret-soft: rgba(46, 10, 10, 0.74);
+        --champagne: #fbf2e0; /* Jaśniejszy, bardziej "luxury" beż */
+        --champagne-dim: rgba(251, 242, 224, 0.85);
+        --gold: #d4af37; /* Bardziej złoty odcień */
+      }
+
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        padding: 6rem 1.5rem 8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .hero-media {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+
+      .hero-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        filter: saturate(1.1) brightness(1.1); /* Lekko podbite kolory i jasność */
+      }
+
+      .hero-gradient {
+        position: absolute;
+        inset: 0;
+        /* Znacznie lżejszy gradient z nutą złota, żeby rozjaśnić */
+        background: linear-gradient(
+          140deg,
+          rgba(46, 10, 10, 0.4) 0%,
+          rgba(212, 175, 55, 0.15) 50%,
+          rgba(26, 22, 20, 0.5) 100%
+        );
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 46rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.75rem;
+        padding: 2.5rem 1.5rem; /* Mniejszy padding na mobile */
+        border-radius: 2.75rem;
+        border: 1px solid rgba(244, 232, 211, 0.3);
+        background: rgba(26, 22, 20, 0.35); /* Lżejsze tło boxa */
+        box-shadow: 0 35px 65px rgba(10, 8, 6, 0.4);
+        backdrop-filter: blur(.15px); /* Mocniejszy blur dla lepszej czytelności przy lżejszym tle */
+      }
+
+      @media (min-width: 640px) {
+        .hero-content {
+          padding: 3rem 3.5rem;
+        }
+      }
+
+      /* Dodano dla wyśrodkowania przycisku głównego */
+      .hero-content {
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-tag {
+        align-self: center;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1.75rem;
+        border-radius: 999px;
+        border: 1px solid rgba(212, 175, 55, 0.52); /* Jaśniejsze złoto */
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+        color: var(--champagne); /* Jaśniejszy kolor */
+        background-color: rgba(17, 11, 10, 0.55);
+        backdrop-filter: blur(14px);
+      }
+
+      .hero-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(1.5rem, 4vw, 3rem); /* Mniejszy rozmiar czcionki */
+        line-height: 1.4; /* Większy odstęp między liniami */
+        letter-spacing: 0.12em; /* Zmniejszony odstęp między literami */
+        text-transform: uppercase;
+        color: #ffffff;
+        text-shadow: 0 18px 42px rgba(0, 0, 0, 0.48);
+        word-wrap: break-word;
+      }
+
+      .hero-title-line {
+        display: block;
+      }
+
+      .hero-title-line + .hero-title-line {
+        margin-top: 0.5em;
+      }
+
+      .hero-title-line--tight {
+        letter-spacing: 0.18em;
+      }
+
+      @media (max-width: 640px) {
+        .hero-title-line + .hero-title-line {
+          margin-top: 0.35em;
+        }
+      }
+
+      .hero-cta {
+        min-width: 260px;
+        justify-content: center;
+        text-align: center;
+        border-color: rgba(212, 175, 55, 0.8);
+        background: linear-gradient(125deg, var(--gold) 0%, #c4a030 45%, #b8972a 50%, #c4a030 55%, var(--gold) 100%);
+        background-size: 200% auto;
+        background-position: 0% center;
+        color: var(--claret); /* Ciemny tekst na złotym tle */
+        font-weight: 600;
+        font-size: 1.125rem;
+        text-shadow: none;
+        box-shadow: 0 18px 34px rgba(212, 175, 55, 0.4);
+        padding: 1.1rem 2.4rem;
+        border-radius: 999px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: visible;
+      }
+
+      .hero-cta:hover {
+        color: var(--claret);
+        border-color: rgba(212, 175, 55, 1);
+        background-position: 100% center;
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 35px 70px rgba(212, 175, 55, 0.5);
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .section {
+        position: relative;
+        padding: 6rem 1.5rem;
+      }
+
+      .section-crafted {
+        background-image: linear-gradient(rgba(18, 14, 12, 0.68), rgba(18, 14, 12, 0.68)),
+          url('/public/zdj1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        isolation: isolate;
+      }
+
+      .section-crafted::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(18, 14, 12, 0.25);
+        z-index: 0;
+      }
+
+      .section-crafted .section-shell {
+        position: relative;
+        z-index: 1;
+      }
+
+      .section-shell {
+        width: min(1200px, 100%);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+      }
+
+      .section-intro {
+        max-width: 48rem;
+        margin: 0 auto 3.5rem auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .section-eyebrow {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.375rem; /* Zwiększone o ~2px (było 1.25rem) */
+        font-weight: 600;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--gold);
+        text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        margin-bottom: 0.5rem;
+      }
+
+      .section-heading {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2rem, 3vw, 3rem);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--champagne);
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+        text-wrap: balance;
+      }
+
+      .section-subheading {
+        font-size: 21px;
+        line-height: 1.75;
+        color: var(--champagne-dim);
+      }
+
+      /* Nowe style dla sekcji tekstowej potrzeb (zastępują amulet-grid w tej sekcji) */
+      .section-amulets {
+        background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8), transparent 60%),
+          linear-gradient(to bottom, #fbf2e0, #f5e6cc);
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Ozdobny pył w tle */
+      .section-amulets::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232e0a0a' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.4;
+        pointer-events: none;
+      }
+
+      .section-amulets .section-heading {
+        color: var(--claret);
+        text-shadow: none;
+      }
+
+      .section-amulets .section-eyebrow {
+        color: #b8972a; /* Ciemniejsze złoto dla lepszej czytelności na jasnym tle */
+        text-shadow: none;
+      }
+
+      .section-amulets .need-text {
+        color: var(--champagne);
+      }
+      
+      .section-amulets .need-highlight {
+        color: var(--gold);
+        font-weight: 500;
+      }
+
+      .section-amulets .need-item {
+        background: rgba(46, 10, 10, 0.85); /* Ciemny brąz */
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 12px;
+        padding: 1.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .section-amulets .need-item {
+          background: rgba(46, 10, 10, 0.85);
+          border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+
+        .section-amulets .need-item:hover {
+          background: rgba(46, 10, 10, 0.95);
+          border-color: rgba(212, 175, 55, 0.6);
+          transform: translateY(-5px);
+        }
+      }
+      
+      .section-amulets .section-intro {
+        margin-bottom: 1rem;
+      }
+
+      .needs-grid {
+        display: grid;
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 1rem auto 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      @media (min-width: 768px) {
+        .needs-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 3rem 4rem;
+        }
+      }
+
+      .need-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        transition: all 0.4s ease;
+      }
+
+      .need-item:last-child {
+        border-bottom: none;
+      }
+
+      @media (min-width: 768px) {
+        .need-item {
+          border-bottom: none;
+          padding: 2rem;
+          background: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(212, 175, 55, 0.1);
+          border-radius: 4px;
+          position: relative;
+        }
+
+        .need-item::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border: 1px solid rgba(212, 175, 55, 0.3);
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          pointer-events: none;
+          transform: scale(0.95);
+        }
+
+        .need-item:hover {
+          background: rgba(46, 10, 10, 0.3);
+          transform: translateY(-5px);
+        }
+
+        .need-item:hover::before {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .need-icon {
+        color: var(--gold);
+        font-size: 1.4rem;
+        line-height: 1;
+        margin-top: 0.2rem;
+        filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.4));
+      }
+
+      .need-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.35rem; /* Zwiększone z 1.25rem */
+        color: rgba(244, 232, 211, 0.9);
+        line-height: 1.4;
+        margin: 0;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+      }
+      
+      .need-highlight {
+        color: var(--gold);
+        font-style: italic;
+      }
+
+      @media (max-width: 640px) {
+        /* Usunięcie specyficznych stylów mobile dla starego gridu */
+        .need-text {
+          font-size: 1.2rem; /* Zwiększone na mobile */
+        }
+      }
+
+
+      .amulet-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1.5rem; /* Większy odstęp */
+        border-radius: 999px;
+        border: 1px solid rgba(200, 169, 106, 0.6);
+        padding: 1rem 2.4rem;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.1rem;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--champagne); /* Jasny kolor tekstu */
+        background: linear-gradient(125deg, #2e0a0a 0%, #3b0d0d 45%, #461010 50%, #3b0d0d 55%, #2e0a0a 100%);
+        background-size: 200% auto;
+        background-position: 0% center;
+        box-shadow: 0 18px 34px rgba(46, 10, 10, 0.28);
+        transition: all 0.4s ease;
+        text-decoration: none;
+        position: relative;
+        overflow: visible;
+      }
+
+      .amulet-cta:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 26px 48px rgba(212, 175, 55, 0.25);
+        border-color: rgba(200, 169, 106, 1);
+        background-position: 100% center;
+        color: var(--champagne);
+      }
+
+      .section-energy {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        border-top: 1px solid rgba(200, 169, 106, 0.15);
+        border-bottom: 1px solid rgba(200, 169, 106, 0.1);
+        background: radial-gradient(circle at top, rgba(46, 10, 10, 0.25), transparent 45%),
+          linear-gradient(180deg, rgba(17, 11, 10, 0.85), rgba(26, 22, 20, 0.96));
+      }
+
+      .section-energy::before,
+      .section-energy::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        opacity: 0.14;
+        background-image: radial-gradient(circle, rgba(200, 169, 106, 0.4) 1px, transparent 1px);
+        background-size: 140px 140px;
+        transform: rotate(8deg);
+      }
+
+      .section-energy::after {
+        opacity: 0.2;
+        background-size: 90px 90px;
+        transform: rotate(-6deg) scale(1.1);
+      }
+
+      .energy-card {
+        position: relative;
+        width: 100%;
+        max-width: 64rem;
+        margin: 0 auto;
+        padding: 3rem;
+        border-radius: 2.25rem;
+        border: 1px solid rgba(244, 232, 211, 0.16);
+        background: rgba(17, 11, 10, 0.65);
+        box-shadow: 0 35px 80px rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(28px);
+      }
+
+      .energy-card p {
+        font-size: 1.05rem;
+        line-height: 1.85;
+        color: rgba(244, 232, 211, 0.78);
+      }
+
+      .energy-grid-container {
+        display: grid;
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      
+      @media (min-width: 768px) {
+        .energy-grid-container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .energy-feature-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        transition: transform 0.3s ease;
+      }
+      
+      .energy-feature-item:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .energy-icon-box {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 215, 0, 0.8);
+        background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+        color: #ffd700;
+        font-size: 1.5rem;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.25), inset 0 0 15px rgba(255, 215, 0, 0.1);
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+      }
+
+      .energy-feature-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--champagne-dim);
+      }
+
+      .energy-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        border-radius: 999px;
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        padding: 0.5rem 1.75rem;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.85rem;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--champagne);
+        background-color: rgba(17, 11, 10, 0.5);
+        margin-bottom: 1.5rem;
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+      }
+
+      .feature-grid {
+        display: grid;
+        gap: 1.75rem;
+        margin-top: 3rem;
+      }
+
+      @media (min-width: 640px) {
+        .feature-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      .feature-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Wyśrodkowanie */
+        text-align: center; /* Wyśrodkowanie */
+        gap: 1.25rem;
+        border-radius: 1.6rem;
+        border: 1px solid rgba(244, 232, 211, 0.08);
+        background: rgba(26, 22, 20, 0.85);
+        padding: 2.5rem 2rem; /* Większy padding */
+        box-shadow: 0 22px 50px rgba(10, 8, 6, 0.35);
+        overflow: hidden;
+      }
+
+      .feature-card::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        border: 1px solid rgba(200, 169, 106, 0.12);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .feature-card:hover::after {
+        opacity: 1;
+      }
+
+      .feature-emoji {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 215, 0, 0.8);
+        background-color: rgba(255, 215, 0, 0.05);
+        font-size: 1.4rem;
+        color: #ffd700;
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(255, 215, 0, 0.1);
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+        transition: all 0.3s ease;
+      }
+
+      .feature-card:hover .feature-emoji {
+        transform: scale(1.1) rotate(10deg);
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.6), inset 0 0 15px rgba(255, 215, 0, 0.3);
+        background-color: rgba(255, 215, 0, 0.1);
+      }
+
+      .feature-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.45rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgb(231, 214, 193);
+      }
+
+      .feature-copy {
+        font-size: 1rem; /* Zwiększone */
+        line-height: 1.7;
+        color: var(--champagne-dim);
+      }
+
+      .section-cta {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+      }
+
+      .section-process {
+        position: relative;
+        background: radial-gradient(circle at 20% 20%, rgba(46, 10, 10, 0.15), transparent 50%),
+          rgba(26, 22, 20, 0.94);
+        overflow: hidden;
+      }
+
+      /* Process Timeline Styles */
+      .process-timeline {
+        position: relative;
+        max-width: 900px;
+        margin: 4rem auto 0;
+        padding: 1rem 0;
+      }
+
+      .process-timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        width: 1px;
+        background: linear-gradient(to bottom, 
+          rgba(212, 175, 55, 0), 
+          rgba(212, 175, 55, 0.4) 15%, 
+          rgba(212, 175, 55, 0.4) 85%, 
+          rgba(212, 175, 55, 0)
+        );
+      }
+
+      .timeline-step {
+        position: relative;
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 5rem;
+      }
+
+      .timeline-step:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline-marker {
+        position: relative;
+        z-index: 2;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #1a1614;
+        border: 1px solid rgba(255, 215, 0, 0.8);
+        color: #ffd700;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.25rem;
+        box-shadow: 0 0 0 8px rgba(26, 22, 20, 1), 0 0 15px rgba(255, 215, 0, 0.4);
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+      }
+
+      .timeline-content {
+        flex: 1;
+        padding-top: 0.25rem;
+      }
+
+      .timeline-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        color: var(--champagne);
+        margin-bottom: 1rem;
+        line-height: 1.3;
+        letter-spacing: 0.02em;
+      }
+
+      .timeline-title strong {
+        display: block;
+        color: var(--gold);
+        font-size: 0.7em;
+        font-family: 'Space Grotesk', sans-serif;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        opacity: 0.9;
+      }
+
+      .timeline-desc {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: var(--champagne-dim);
+      }
+
+      @media (min-width: 768px) {
+        .process-timeline::before {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .timeline-step {
+          /* Domyślnie parzyste (prawa strona) - wyrównanie do końca */
+          justify-content: flex-end;
+          gap: 0;
+        }
+        
+        .timeline-step:nth-child(odd) {
+          /* Nieparzyste (lewa strona) - wyrównanie do początku */
+          justify-content: flex-start;
+          flex-direction: row; /* Reset kierunku */
+        }
+        
+        .timeline-marker {
+          position: absolute;
+          left: 50%;
+          top: 0; /* Przyklej do góry sekcji kroku */
+          transform: translateX(-50%);
+          width: 56px;
+          height: 56px;
+          font-size: 1.5rem;
+        }
+        
+        .timeline-content {
+          width: 50%;
+          flex: none;
+        }
+        
+        .timeline-step:nth-child(odd) .timeline-content {
+          text-align: right;
+          padding-right: 4.5rem; /* Miejsce na marker */
+        }
+        
+        .timeline-step:nth-child(even) .timeline-content {
+          text-align: left;
+          padding-left: 4.5rem; /* Miejsce na marker */
+        }
+      }
+
+      .section-testimonials .section-subheading {
+        max-width: 42rem;
+        margin: 0 auto;
+      }
+
+      .section-testimonials .section-intro {
+        margin-bottom: 0;
+      }
+
+      .testimonial-grid {
+        column-count: 1;
+        column-gap: 1.5rem;
+        margin-top: 0;
+      }
+
+      @media (min-width: 640px) {
+        .testimonial-grid {
+          column-count: 2;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .testimonial-grid {
+          column-count: 3;
+        }
+      }
+
+      .testimonial-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2.5rem;
+        border-radius: 1.5rem;
+        border: 1px solid rgba(212, 175, 55, 0.22); /* Złota ramka */
+        background: rgba(26, 22, 20, 0.75);
+        backdrop-filter: blur(22px);
+        box-shadow: 0 18px 42px rgba(10, 8, 6, 0.3);
+        text-align: center; /* Wyśrodkowanie opinii */
+        align-items: center;
+      }
+
+      .testimonial-image-card {
+        break-inside: avoid;
+        margin-bottom: 1.5rem;
+        border-radius: 1.5rem;
+        transition: transform 0.3s ease;
+      }
+
+      .testimonial-image-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .testimonial-image-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 1.5rem;
+        box-shadow: 0 18px 42px rgba(10, 8, 6, 0.3);
+      }
+
+      .testimonial-quote {
+        font-size: 1.05rem; /* Zwiększone z 0.96rem */
+        line-height: 1.8;
+        color: rgba(244, 232, 211, 0.85); /* Jaśniejszy tekst */
+      }
+
+      .testimonial-author {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.75rem;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: rgba(200, 169, 106, 0.7);
+      }
+
+      .section-choose {
+        background: rgba(26, 22, 20, 0.94);
+      }
+
+      .product-grid {
+        display: grid;
+        gap: 1.75rem;
+        margin-top: 3rem;
+      }
+
+      @media (min-width: 640px) {
+        .product-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .product-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      .product-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1.5rem;
+        border: 1px solid rgba(46, 10, 10, 0.26);
+        background: rgba(26, 22, 20, 0.82);
+        overflow: hidden;
+        box-shadow: 0 18px 40px rgba(10, 8, 6, 0.28);
+        transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+          border-color 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+        position: relative;
+      }
+
+      .product-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(212, 175, 55, 0.65);
+      }
+
+      .product-card img {
+        display: block;
+        width: 100%;
+        height: 240px; /* Przywrócona wysokość dla kart produktowych */
+        object-fit: cover;
+      }
+
+      #product-guardian-mystic > img,
+      #product-sensual-magnetic > img,
+      #product-intuition-third-eye > img,
+      #product-selflove > img,
+      #product-aura > img,
+      #product-madrosc-przodkin > img,
+      #product-old-money > img {
+        object-position: center 20%;
+      }
+
+      .section-amulets .product-card .product-body {
+        position: relative;
+        z-index: 1;
+        justify-content: flex-start;
+        gap: 1.75rem;
+        padding-top: 0;
+      }
+
+      .section-amulets .amulet-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%;
+      }
+
+      .product-body {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Wyśrodkowanie */
+        text-align: center; /* Wyśrodkowanie */
+        gap: 1rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .product-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgb(231, 214, 193);
+      }
+
+      .price-tag {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.82rem;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: rgba(200, 169, 106, 0.7);
+      }
+
+      .section-about {
+        background: radial-gradient(circle at 80% 50%, rgba(46, 10, 10, 0.1), transparent 60%),
+          linear-gradient(to bottom, rgba(26, 22, 20, 0.96), rgba(26, 22, 20, 0.92));
+      }
+
+      .about-content {
+        display: grid;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      @media (min-width: 768px) {
+        .about-content {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .about-image {
+        position: relative;
+        border-radius: 2rem;
+        overflow: hidden;
+        box-shadow: 0 25px 50px rgba(10, 8, 6, 0.35);
+        border: 1px solid rgba(212, 175, 55, 0.25);
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+
+      .about-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: left;
+      }
+
+      .about-text .section-heading {
+        font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+        text-align: left;
+      }
+
+      .about-text .section-subheading {
+        text-align: left;
+      }
+
+      @media (max-width: 767px) {
+        .about-text {
+          text-align: center;
+          order: 2;
+        }
+        .about-text .section-heading,
+        .about-text .section-subheading {
+          text-align: center;
+        }
+        .about-image {
+          order: 1;
+          width: 80%;
+        }
+      }
+
+      .footer {
+        padding: 3rem 1.5rem 4rem;
+        text-align: center;
+        font-size: 0.74rem;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: rgba(244, 232, 211, 0.6);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1.5rem;
+        letter-spacing: 0.18em;
+      }
+
+      .footer-links a {
+        color: rgba(244, 232, 211, 0.75);
+        text-decoration: none;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: var(--gold);
+        transform: translateY(-2px);
+      }
+
+      .footer-socials {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .footer-socials a {
+        width: 40px;
+        height: 40px;
+        border-radius: 999px;
+        border: 1px solid rgba(244, 232, 211, 0.3);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(244, 232, 211, 0.8);
+        transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+      }
+
+      .footer-socials a:hover {
+        border-color: var(--gold);
+        color: var(--gold);
+        transform: translateY(-2px) scale(1.05);
+      }
+
+      /* --- MAGIC & LUXURY ADDITIONS --- */
+
+      /* 1. Particle / Magic Dust Styles */
+      .magic-particle {
+        position: absolute;
+        pointer-events: none;
+        background: radial-gradient(circle, #fff 0%, rgba(212, 175, 55, 0.8) 40%, transparent 80%);
+        border-radius: 50%;
+        opacity: 0;
+        z-index: 9999;
+      }
+      
+      /* 2. Subtle Shimmer Animation for Cards */
+      @keyframes soft-glow {
+        0%, 100% { box-shadow: 0 18px 40px rgba(10, 8, 6, 0.28); border-color: rgba(46, 10, 10, 0.26); }
+        50% { box-shadow: 0 25px 50px rgba(212, 175, 55, 0.15); border-color: rgba(212, 175, 55, 0.4); }
+      }
+      
+      /* Apply to product cards on hover */
+      .product-card:hover {
+        /* Existing transform kept via original class, but we enhance the shine here */
+        box-shadow: 0 30px 60px rgba(212, 175, 55, 0.12);
+      }
+
+      /* 4. Floating Sparkles */
+      .floating-sparkle {
+        position: absolute;
+        color: var(--gold);
+        opacity: 0.7;
+        filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.6));
+        animation: float-sparkle 4s ease-in-out infinite;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      @keyframes float-sparkle {
+        0%, 100% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.4; }
+        50% { transform: translateY(-15px) scale(1.3) rotate(15deg); opacity: 1; }
+      }
+      
+      /* 5. Button Hover Magic */
+      .hero-cta, .amulet-cta {
+        position: relative;
+        overflow: visible; /* Allow particles to fly out */
+      }
+      
+      /* Inner glow on buttons */
+      .hero-cta::after, .amulet-cta::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 999px;
+        box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.4);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      .hero-cta:hover::after, .amulet-cta:hover::after {
+        opacity: 1;
+      }
+
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Magic Dust Effect on Buttons
+        const buttons = document.querySelectorAll('.hero-cta, .amulet-cta');
+        
+        buttons.forEach(btn => {
+          btn.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.5) return; // Limit particle density
+            createParticle(e.clientX, e.clientY);
+          });
+        });
+
+        function createParticle(x, y) {
+          const particle = document.createElement('div');
+          particle.classList.add('magic-particle');
+          document.body.appendChild(particle);
+
+          const size = Math.random() * 5 + 2;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+          particle.style.left = `${x}px`;
+          particle.style.top = `${y}px`;
+          
+          // Add random color variance (gold/white)
+          const isGold = Math.random() > 0.3;
+          particle.style.background = isGold 
+            ? 'radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(212,175,55,0.6) 100%)' 
+            : 'radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,230,230,0.6) 100%)';
+
+          const destinationX = (Math.random() - 0.5) * 60;
+          const destinationY = (Math.random() - 0.5) * 60 - 30; // Tendency to float up
+          const rotation = Math.random() * 360;
+
+          const animation = particle.animate([
+            { transform: `translate(-50%, -50%) scale(0.5) rotate(0deg)`, opacity: 1 },
+            { transform: `translate(calc(-50% + ${destinationX}px), calc(-50% + ${destinationY}px)) scale(0) rotate(${rotation}deg)`, opacity: 0 }
+          ], {
+            duration: 800 + Math.random() * 600,
+            easing: 'cubic-bezier(0, .9, .57, 1)',
+          });
+
+          animation.onfinish = () => particle.remove();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header class='hero' id='hero'>
+      <!-- Floating Sparkles -->
+      <svg class="floating-sparkle" style="top: 15%; left: 10%; width: 24px; animation-delay: 0s;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" /></svg>
+      <svg class="floating-sparkle" style="top: 25%; right: 15%; width: 18px; animation-delay: 1.5s;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" /></svg>
+      <svg class="floating-sparkle" style="bottom: 20%; left: 20%; width: 30px; animation-delay: 2.5s; opacity: 0.5;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" /></svg>
+
+      <div class='hero-media'>
+        <img src='/public/tlo222.jpg' alt='Amulet Simkensy w świetlistym otoczeniu' />
+        <div class='hero-gradient'></div>
+      </div>
+      <div class='hero-content'>
+        <h1 class='hero-title'>
+          <span class='hero-title-line'>CHCESZ W&nbsp;KOŃCU POCZUĆ SPOKÓJ, PEWNOŚĆ I&nbsp;LEKKOŚĆ W&nbsp;CODZIENNOŚCI?</span>
+        </h1>
+        <a class='hero-cta' href='#amulets'>TEGO PRAGNĘ</a>
+      </div>
+    </header>
+    <main>
+      <section id='amulets' class='section section-amulets'>
+        <div class='section-shell'>
+          <div class='section-intro'>
+            <p class='section-eyebrow'>Amulety SIMKENSY</p>
+            <h2 class='section-heading'>POWSTAŁY DLA KOBIET TAKICH JAK TY, które:</h2>
+          </div>
+          
+          <div class='needs-grid'>
+            <div class='need-item'>
+              <span class='need-icon'>✦</span>
+              <p class='need-text'>Czują, że <span class="need-highlight">brakuje im czułości</span> do samej siebie w codziennym pędzie</p>
+            </div>
+            <div class='need-item'>
+              <span class='need-icon'>✦</span>
+              <p class='need-text'>Ciągle dają innym <span class="need-highlight">za dużo z siebie</span>, zapominając o własnych granicach</p>
+            </div>
+            <div class='need-item'>
+              <span class='need-icon'>✦</span>
+              <p class='need-text'>Pragną poczuć swoją <span class="need-highlight">kobiecość i magnetyzm</span>, który przyciąga</p>
+            </div>
+            <div class='need-item'>
+              <span class='need-icon'>✦</span>
+              <p class='need-text'>Chcą pokochać siebie <span class="need-highlight">bez warunków</span> i ciągłego oceniania</p>
+            </div>
+            <div class='need-item'>
+              <span class='need-icon'>✦</span>
+              <p class='need-text'>Mają wrażenie, że życie stało się <span class="need-highlight">zbyt ciężkie</span> i brakuje w nim lekkości</p>
+            </div>
+            <div class='need-item'>
+              <span class='need-icon'>✦</span>
+              <p class='need-text'>Czują, że <span class="need-highlight">potrzebują zmiany</span>, ale nie wiedzą, w którą stronę iść</p>
+            </div>
+            <div class='need-item'>
+              <span class='need-icon'>✦</span>
+              <p class='need-text'>Szukają <span class="need-highlight">wsparcia i siły</span>, płynącej z kobiecej energii</p>
+            </div>
+            <div class='need-item'>
+              <span class='need-icon'>✦</span>
+              <p class='need-text'>Chcą w końcu zaufać swojej <span class="need-highlight">intuicji</span> i wewnętrznemu głosowi</p>
+            </div>
+            <div class='need-item'>
+              <span class='need-icon'>✦</span>
+              <p class='need-text'>Marzą o <span class="need-highlight">spokojnej relacji</span> z pieniędzmi i obfitością</p>
+            </div>
+            <div class='need-item'>
+              <span class='need-icon'>✦</span>
+              <p class='need-text'>Pragną po prostu czuć się <span class="need-highlight">piękne i spokojne</span> każdego dnia</p>
+            </div>
+          </div>
+
+          <div class='section-cta'>
+            <a class='hero-cta' href='#choose'>WYBIERZ SWÓJ AMULET</a>
+          </div>
+        </div>
+      </section>
+      <section class='section section-crafted' id='crafted'>
+        <!-- Section Sparkles -->
+        <svg class="floating-sparkle" style="top: 10%; right: 10%; width: 24px; animation-delay: 1s;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" /></svg>
+        <svg class="floating-sparkle" style="bottom: 15%; left: 5%; width: 20px; animation-delay: 3s;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" /></svg>
+
+        <div class='section-shell'>
+          <div class='section-intro'>
+            <h2 class='section-heading'>NIE MA DWÓCH TAKICH SAMYCH</h2>
+            <p class='section-subheading'>
+              Amulety wykonuję ręcznie z wyjątkowych materiałów, mających swoją historię i znaczenie - dlatego każdy jest inny - tak jak Ty.
+            </p>
+          </div>
+          <div class='feature-grid'>
+          <article class='feature-card'>
+            <span class='feature-emoji' aria-hidden='true'>✺</span>
+            <h3 class='feature-title'>Prawdziwe kwiaty i symbole natury</h3>
+            <p class='feature-copy'>
+              Zatrzymujemy ulotne detale świata roślin, żeby przypominały o&nbsp;cykliczności, wdzięczności i&nbsp;łagodności dla siebie.
+            </p>
+          </article>
+          <article class='feature-card'>
+            <span class='feature-emoji' aria-hidden='true'>✧</span>
+            <h3 class='feature-title'>Piasek i muszle z wyjątkowych miejsc</h3>
+            <p class='feature-copy'>
+              Zamykamy w&nbsp;żywicy fragmenty ważnych podróży, abyś mogła wracać do&nbsp;energii miejsc, które napełniają Cię spokojem.
+            </p>
+          </article>
+          <article class='feature-card'>
+            <span class='feature-emoji' aria-hidden='true'>∞</span>
+            <h3 class='feature-title'>Przedmioty, które mają dla Ciebie znaczenie</h3>
+            <p class='feature-copy'>
+              Wplatamy w&nbsp;amulet drobiazgi, które kojarzą Ci się z&nbsp;miłością, wsparciem i&nbsp;Twoją wewnętrzną mądrością.
+            </p>
+          </article>
+          <article class='feature-card'>
+            <span class='feature-emoji' aria-hidden='true'>❁</span>
+            <h3 class='feature-title'>Pamiątki np. kwiaty z bukietu ślubnego</h3>
+            <p class='feature-copy'>
+              Zachowujemy wspomnienia – od&nbsp;płatków z&nbsp;bukietu ślubnego po&nbsp;listy i&nbsp;symbole bliskich osób, aby towarzyszyły Ci każdego dnia.
+            </p>
+          </article>
+          </div>
+        <div class='section-cta'>
+          <a class='hero-cta' href='#choose'>WYBIERZ SWÓJ</a>
+        </div>
+        </div>
+      </section>
+      <section class='section section-process' id='process'>
+        <div class='section-shell'>
+          <div class='section-intro'>
+            <h2 class='section-heading'>JAK DZIAŁA TWÓJ AMULET?</h2>
+            <p class='section-subheading'>
+              To proces, w którym biżuteria zmienia się w Twój osobisty symbol mocy. Zobacz, jak to się dzieje.
+            </p>
+          </div>
+          
+          <div class='process-timeline'>
+            <!-- Step 1 -->
+            <div class='timeline-step'>
+              <div class='timeline-marker'>1</div>
+              <div class='timeline-content'>
+                <h3 class='timeline-title'>
+                  <strong>Krok Pierwszy</strong>
+                  Wybierasz sercem
+                </h3>
+                <p class='timeline-desc'>
+                  Nie analizujesz. Przeglądasz amulety i nagle jeden z nich Cię "woła". To ten moment, w którym zaczyna się Twoja intencja. Słuchasz swojej intuicji — ona wie najlepiej, czego teraz potrzebujesz.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class='timeline-step'>
+              <div class='timeline-marker'>2</div>
+              <div class='timeline-content'>
+                <h3 class='timeline-title'>
+                  <strong>Tworzenie</strong>
+                  Przygotowuję Twój amulet
+                </h3>
+                <p class='timeline-desc'>
+                  Kiedy składasz zamówienie, siadam do pracy. Każdy amulet tworzę ręcznie, łącząc wyjątkowe elementy: kwiaty, piasek, muszle. To czas, kiedy materia łączy się z energią Twojego wyboru.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class='timeline-step'>
+              <div class='timeline-marker'>3</div>
+              <div class='timeline-content'>
+                <h3 class='timeline-title'>
+                  <strong>Przesyłka</strong>
+                  Odbierasz coś więcej niż paczkę
+                </h3>
+                <p class='timeline-desc'>
+                  W środku znajdziesz nie tylko biżuterię, ale też instrukcję prostego rytuału założenia. To klucz, który pomoże Ci połączyć się z energią amuletu i "zaprogramować" go na Twoją intencję.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class='timeline-step'>
+              <div class='timeline-marker'>4</div>
+              <div class='timeline-content'>
+                <h3 class='timeline-title'>
+                  <strong>Rytuał</strong>
+                  Zakładasz go po raz pierwszy
+                </h3>
+                <p class='timeline-desc'>
+                  Ten gest to symboliczny moment wyboru siebie. Kiedy zapinasz łańcuszek, wysyłasz sygnał do swojej podświadomości: "Jestem dla siebie ważna. To jest mój czas".
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class='timeline-step'>
+              <div class='timeline-marker'>5</div>
+              <div class='timeline-content'>
+                <h3 class='timeline-title'>
+                  <strong>Codzienność</strong>
+                  Staje się Twoją kotwicą
+                </h3>
+                <p class='timeline-desc'>
+                  Ilekroć na niego spojrzysz lub go dotkniesz w ciągu dnia, przypominasz sobie o swojej sile, spokoju i intencji. To Twój namacalny punkt oparcia w każdej sytuacji.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class='section-cta'>
+            <a class='hero-cta' href='#choose'>
+              Rozpocznij ten proces
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class='section section-about' id='o-mnie'>
+        <div class='section-shell'>
+          <div class='about-content'>
+            <div class='about-image'>
+              <img src='/public/simona1.jpg' alt='Simona' loading='lazy' />
+            </div>
+            <div class='about-text'>
+              <p class='section-eyebrow'>O mnie</p>
+              <h2 class='section-heading'>CZEŚĆ, JESTEM SIMONA!</h2>
+              <p class='section-subheading'>
+                Nie planowałam biznesu – zaczęłam tworzyć biżuterię SIMKENSY z potrzeby serca, intencji i prawdziwych historii.
+              </p>
+              <p class='section-subheading'>
+                Tworzę dla kobiet, które chcą zachować kawałek magii ważnych momentów i czuć się blisko siebie w codzienności. Jeśli to brzmi jak Ty, witaj w domu ✨
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class='section section-testimonials' id='opinie'>
+        <div class='section-shell'>
+          <div class='section-intro'>
+            <p class='section-eyebrow'>Kobiety SIMKENSY</p>
+            <h2 class='section-heading'>OPINIE</h2>
+            <p class='section-subheading'>
+              Historie kobiet, które wybrały swoje amulety i&nbsp;odkryły w&nbsp;nich codzienne źródło spokoju i&nbsp;pewności.
+            </p>
+          </div>
+          <div class='testimonial-grid'>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20250829-183634_WhatsApp.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20250911-223622_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20250924-155108_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251016-101746_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251028-233418_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251029-175324_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251031-093134_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251105-194946_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251107-140127_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251109-140832_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251113-080246_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251119-152410_Messenger.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+            <div class='testimonial-image-card'>
+              <img src='/public/opinie/Screenshot_20251122-211825_Instagram.jpg' alt='Opinia klientki' loading='lazy' />
+            </div>
+          </div>
+      </section>
+      <section class='section section-choose' id='choose'>
+        <div class='section-shell'>
+          <div class='section-intro'>
+            <p class='section-eyebrow'>Wybierz swój amulet</p>
+            <h2 class='section-heading'>Każdy amulet ma swoją energię</h2>
+            <p class='section-subheading'>
+              To nie jest zwykła biżuteria — wspiera Cię dokładnie tam, gdzie tego potrzebujesz.
+            </p>
+          </div>
+          <div class='product-grid'>
+          <article class='product-card' id='product-inner-child'>
+            <img src='/public/amulety/pelne/innerchild.jpg' alt='Amulet Inner Child' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Inner Child</h3>
+              <p class='price-tag'>Cena: 155 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-inner-child-776.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
+            </div>
+          </article>
+          <article class='product-card' id='product-guardian-mystic'>
+            <img src='/public/amulety/pelne/guardianmystic.jpg' alt='Amulet Guardian &amp; Mystic' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Guardian &amp; Mystic</h3>
+              <p class='price-tag'>Cena: 155 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-guardian-mystic-745.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
+            </div>
+          </article>
+          <article class='product-card' id='product-sensual-magnetic'>
+            <img src='/public/amulety/pelne/sensualmagnetic.jpg' alt='Amulet Sensual &amp; Magnetic' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Sensual &amp; Magnetic</h3>
+              <p class='price-tag'>Cena: 155 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-sensual-magnetic-742.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
+            </div>
+          </article>
+          <article class='product-card' id='product-selflove'>
+            <img src='/public/amulety/pelne/selflove.jpg' alt='Amulet Selflove' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Selflove</h3>
+              <p class='price-tag'>Cena: 155 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-selflove-861.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
+            </div>
+          </article>
+          <article class='product-card' id='product-abundance-joy'>
+            <img src='/public/amulety/pelne/abundancejoy.jpg' alt='Amulet Abundance &amp; Joy' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Abundance &amp; Joy</h3>
+              <p class='price-tag'>Cena: 155 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-abudance-joy-743.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
+            </div>
+          </article>
+          <article class='product-card' id='product-rozkwitanie'>
+            <img src='/public/amulety/pelne/rozkwitanie.jpg' alt='Amulet Rozkwitanie' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Rozkwitanie</h3>
+              <p class='price-tag'>Cena: 155 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-rozkwitanie-860.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
+            </div>
+          </article>
+          <article class='product-card' id='product-madrosc-przodkin'>
+            <img src='/public/amulety/pelne/madroscprzodkin.jpg' alt='Amulet Mądrość Przodkiń' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Mądrość Przodkiń</h3>
+              <p class='price-tag'>Cena: 155 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-madrosc-przodkin-777.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
+            </div>
+          </article>
+          <article class='product-card' id='product-intuition-third-eye'>
+            <img src='/public/amulety/pelne/intuitionthirdeye.jpg' alt='Amulet Intuition &amp; Third Eye' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Intuition &amp; Third Eye</h3>
+              <p class='price-tag'>Cena: 155 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-bogini-intuition-third-eye-744.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
+            </div>
+          </article>
+          <article class='product-card' id='product-old-money'>
+            <img src='/public/amulety/pelne/oldmoney.jpg' alt='Amulet Old Money' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Old Money</h3>
+              <p class='price-tag'>Cena: 222 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-old-money-pieniadze-863.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
+            </div>
+          </article>
+          <article class='product-card' id='product-aura'>
+            <img src='/public/amulety/pelne/aura.jpg' alt='Amulet Aura' loading='lazy' />
+            <div class='product-body'>
+              <h3 class='product-title'>Aura</h3>
+              <p class='price-tag'>Cena: 199 zł</p>
+              <a
+                class='amulet-cta'
+                href='https://simkensy.com/pl/products/amulet-aura-862.html'
+                target='_blank'
+                rel='noopener'
+              >
+                WYBIERAM
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class='footer'>
+      <p>© 2025 SIMKENSY • Amulety Simkensy</p>
+      <div class='footer-links'>
+        <a href='https://simkensy.com/pl/privacy-and-cookie-notice.html' target='_blank' rel='noopener'>Polityka prywatności</a>
+        <a href='https://simkensy.com/pl/terms.html' target='_blank' rel='noopener'>Regulamin</a>
+      </div>
+      <div class='footer-socials' aria-label='Social media'>
+        <a href='https://www.facebook.com/simkensy' target='_blank' rel='noopener' aria-label='Facebook'>
+          <svg viewBox='0 0 24 24' width='20' height='20' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'>
+            <path d='M9 9h2V7.5C11 5.6 12 4 14.5 4H17v3h-1.5c-.7 0-1.5.4-1.5 1.4V9h3l-.4 3h-2.6v8h-3v-8H9z' fill='currentColor' stroke='none' />
+          </svg>
+        </a>
+        <a href='https://www.instagram.com/simkensy.is/' target='_blank' rel='noopener' aria-label='Instagram'>
+          <svg viewBox='0 0 24 24' width='20' height='20' fill='none' stroke='currentColor' stroke-width='1.5'>
+            <rect x='4' y='4' width='16' height='16' rx='5' />
+            <circle cx='12' cy='12' r='3.5' />
+            <circle cx='17' cy='7' r='1' fill='currentColor' stroke='none' />
+          </svg>
+        </a>
+        <a href='https://www.tiktok.com/@simkensy' target='_blank' rel='noopener' aria-label='TikTok'>
+          <svg viewBox='0 0 24 24' width='20' height='20' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'>
+            <path d='M14 5c.4 1.7 1.7 3 3.4 3.4v3a6 6 0 0 1-3.4-1.1V15a4 4 0 1 1-3.8-4v3.2a1.2 1.2 0 1 0 1.8 1V4.5h2z' />
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
