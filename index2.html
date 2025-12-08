@@ -271,8 +271,8 @@
 
       /* Nowe style dla sekcji tekstowej potrzeb (zastępują amulet-grid w tej sekcji) */
       .section-amulets {
-        background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8), transparent 60%),
-          linear-gradient(to bottom, #fbf2e0, #f5e6cc);
+        background: radial-gradient(circle at 50% 0%, rgba(68, 14, 14, 0.25), transparent 60%),
+          linear-gradient(to bottom, #110b0a, #1a1614);
         position: relative;
         overflow: hidden;
       }
@@ -282,59 +282,21 @@
         content: '';
         position: absolute;
         inset: 0;
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232e0a0a' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         opacity: 0.4;
         pointer-events: none;
       }
 
       .section-amulets .section-heading {
-        color: var(--claret);
-        text-shadow: none;
-      }
-
-      .section-amulets .section-eyebrow {
-        color: #b8972a; /* Ciemniejsze złoto dla lepszej czytelności na jasnym tle */
-        text-shadow: none;
-      }
-
-      .section-amulets .need-text {
         color: var(--champagne);
-      }
-      
-      .section-amulets .need-highlight {
-        color: var(--gold);
-        font-weight: 500;
-      }
-
-      .section-amulets .need-item {
-        background: rgba(46, 10, 10, 0.85); /* Ciemny brąz */
-        border: 1px solid rgba(212, 175, 55, 0.2);
-        border-radius: 12px;
-        padding: 1.5rem;
-      }
-
-      @media (min-width: 768px) {
-        .section-amulets .need-item {
-          background: rgba(46, 10, 10, 0.85);
-          border: 1px solid rgba(212, 175, 55, 0.25);
-        }
-
-        .section-amulets .need-item:hover {
-          background: rgba(46, 10, 10, 0.95);
-          border-color: rgba(212, 175, 55, 0.6);
-          transform: translateY(-5px);
-        }
-      }
-      
-      .section-amulets .section-intro {
-        margin-bottom: 1rem;
+        text-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
       }
 
       .needs-grid {
         display: grid;
         gap: 2rem;
         max-width: 1000px;
-        margin: 1rem auto 0;
+        margin: 3.5rem auto 0;
         position: relative;
         z-index: 1;
       }
@@ -1219,43 +1181,43 @@
           <div class='needs-grid'>
             <div class='need-item'>
               <span class='need-icon'>✦</span>
-              <p class='need-text'>Czują, że <span class="need-highlight">brakuje im czułości</span> do samej siebie w codziennym pędzie</p>
+              <p class='need-text'>czują, że <span class="need-highlight">brakuje im czułości</span> do samej siebie w codziennym pędzie</p>
             </div>
             <div class='need-item'>
               <span class='need-icon'>✦</span>
-              <p class='need-text'>Ciągle dają innym <span class="need-highlight">za dużo z siebie</span>, zapominając o własnych granicach</p>
+              <p class='need-text'>ciągle dają innym <span class="need-highlight">za dużo z siebie</span>, zapominając o własnych granicach</p>
             </div>
             <div class='need-item'>
               <span class='need-icon'>✦</span>
-              <p class='need-text'>Pragną poczuć swoją <span class="need-highlight">kobiecość i magnetyzm</span>, który przyciąga</p>
+              <p class='need-text'>pragną poczuć swoją <span class="need-highlight">kobiecość i magnetyzm</span>, który przyciąga</p>
             </div>
             <div class='need-item'>
               <span class='need-icon'>✦</span>
-              <p class='need-text'>Chcą pokochać siebie <span class="need-highlight">bez warunków</span> i ciągłego oceniania</p>
+              <p class='need-text'>chcą pokochać siebie <span class="need-highlight">bez warunków</span> i ciągłego oceniania</p>
             </div>
             <div class='need-item'>
               <span class='need-icon'>✦</span>
-              <p class='need-text'>Mają wrażenie, że życie stało się <span class="need-highlight">zbyt ciężkie</span> i brakuje w nim lekkości</p>
+              <p class='need-text'>mają wrażenie, że życie stało się <span class="need-highlight">zbyt ciężkie</span> i brakuje w nim lekkości</p>
             </div>
             <div class='need-item'>
               <span class='need-icon'>✦</span>
-              <p class='need-text'>Czują, że <span class="need-highlight">potrzebują zmiany</span>, ale nie wiedzą, w którą stronę iść</p>
+              <p class='need-text'>czują, że <span class="need-highlight">potrzebują zmiany</span>, ale nie wiedzą, w którą stronę iść</p>
             </div>
             <div class='need-item'>
               <span class='need-icon'>✦</span>
-              <p class='need-text'>Szukają <span class="need-highlight">wsparcia i siły</span>, płynącej z kobiecej energii</p>
+              <p class='need-text'>szukają <span class="need-highlight">wsparcia i siły</span>, płynącej z kobiecej energii</p>
             </div>
             <div class='need-item'>
               <span class='need-icon'>✦</span>
-              <p class='need-text'>Chcą w końcu zaufać swojej <span class="need-highlight">intuicji</span> i wewnętrznemu głosowi</p>
+              <p class='need-text'>chcą w końcu zaufać swojej <span class="need-highlight">intuicji</span> i wewnętrznemu głosowi</p>
             </div>
             <div class='need-item'>
               <span class='need-icon'>✦</span>
-              <p class='need-text'>Marzą o <span class="need-highlight">spokojnej relacji</span> z pieniędzmi i obfitością</p>
+              <p class='need-text'>marzą o <span class="need-highlight">spokojnej relacji</span> z pieniędzmi i obfitością</p>
             </div>
             <div class='need-item'>
               <span class='need-icon'>✦</span>
-              <p class='need-text'>Pragną po prostu czuć się <span class="need-highlight">piękne i spokojne</span> każdego dnia</p>
+              <p class='need-text'>pragną po prostu czuć się <span class="need-highlight">piękne i spokojne</span> każdego dnia</p>
             </div>
           </div>
 
